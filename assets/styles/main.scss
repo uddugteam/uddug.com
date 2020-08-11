@@ -1,0 +1,69 @@
+// colors
+$dark: #191E6C;
+$darker: #3D4286;
+$lighter: #EB5757;
+$grayer: #828282;
+$white: #ffffff;
+
+$grid-gutter-width: 10px !default;
+
+// breakpoints
+$xs: 0;
+$sm: 376px;
+$md: 769px;
+$lg: 1025px;
+$xl: 1281px;
+/*$xs: 0px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1280px;
+$xl: 1400px;*/
+
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+);
+
+$container-max-widths: (
+  xs: 315px,
+  sm: 704px,
+  md: 960px,
+  lg: 1117px,
+  xl: 1200px,
+);
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import '~bootstrap-vue/src/index.scss';
+@import "~bootstrap/scss/mixins";
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format('ttf');
+}
+
+html, body {
+  background: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.break-line {
+  display: block;
+}
