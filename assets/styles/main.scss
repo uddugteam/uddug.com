@@ -1,9 +1,11 @@
 // colors
 $dark: #191E6C;
-$darker: #3D4286;
-$lighter: #EB5757;
+$darker: #3d4286;
+$scarleter: #EB5757;
 $grayer: #828282;
+$browner: #4F4F4F;
 $white: #ffffff;
+$lighter: #E0E0E0;
 
 $grid-gutter-width: 10px !default;
 
@@ -13,11 +15,6 @@ $sm: 376px;
 $md: 769px;
 $lg: 1025px;
 $xl: 1281px;
-/*$xs: 0px;
-$sm: 768px;
-$md: 1024px;
-$lg: 1280px;
-$xl: 1400px;*/
 
 $grid-breakpoints: (
   xs: $xs,
