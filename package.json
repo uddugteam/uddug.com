@@ -7,6 +7,7 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },
@@ -18,6 +19,7 @@
     "bootstrap-vue": "^2.15.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.0",
+    "push-dir": "^0.4.1",
     "sass-loader": "^9.0.3"
   },
   "devDependencies": {

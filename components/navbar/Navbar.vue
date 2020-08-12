@@ -7,7 +7,7 @@
           to="./"
         >
           <img src="~/static/Logo.svg" alt="uddug logo">
-          <img class="logo__team" src="~/static/Uddùg.svg" alt="uddug team">
+          <img class="logo__team" src="~/static/Uddug.svg" alt="uddug team">
         </nuxt-link>
         <ul class="navbar-nav justify-content-end">
           <li>Contacts</li>
