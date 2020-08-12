@@ -69,6 +69,20 @@
       </div>
     </section>
     <Projects />
+    <section class="container partners">
+      <h2 class="section-header">Partners</h2>
+      <div class="row">
+        <div class="col-sm-5 order-sm-2 partners__logos">
+          <img src="~/assets/images/partners/kickstox.svg">
+          <img src="~/assets/images/partners/snark.svg">
+          <img src="~/assets/images/partners/lime.svg">
+        </div>
+        <div class="offset-sm-1 order-sm-1"></div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 order-sm-0">
+          <p class="partners__text">We are proud of our partners who support us every step of the way.</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -297,6 +311,39 @@ export default Vue.extend({
 
   &__item-blockchain {
     background: transparent url("~assets/images/services/blockchain.svg") no-repeat 0 2px;
+  }
+}
+
+.partners {
+  padding: 110px 0 140px 0;
+
+  @include media-breakpoint-only(xs) {
+    padding-top: 186px;
+  }
+
+  @include media-breakpoint-only(sm) {
+    padding-top: 120px;
+  }
+
+  &__text {
+    line-height: 170%;
+
+    @include media-breakpoint-only(xs) {
+      text-align: center;
+      line-height: 150%;
+    }
+  }
+
+  &__logos {
+
+    @include media-breakpoint-only(xs) {
+      text-align: center;
+      padding: 40px 0 34px 0;
+    }
+
+    img {
+      margin-right: 30px;
+    }
   }
 }
 </style>
