@@ -6,9 +6,9 @@
   </div>
 </template>
 
-<script>
-import Navbar from '~/components/navbar/Navbar'
-import Footer from '~/components/footer/Footer'
+<script lang="ts">
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
 
 export default {
   components: {

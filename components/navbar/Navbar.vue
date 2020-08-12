@@ -27,14 +27,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'Navbar'
 }
 </script>
 
 <style lang="scss" scoped>
- @import "../../assets/styles/main";
+@import "../../assets/styles/main";
 .navbar {
   padding: 0;
   margin-top: 70px;

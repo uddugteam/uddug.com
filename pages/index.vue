@@ -68,13 +68,17 @@
         </div>
       </div>
     </section>
+    <Projects />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Projects from '@/components/projects'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: { Projects }
+})
 
 </script>
 
@@ -280,19 +284,19 @@ export default Vue.extend({})
   }
 
   &__item-consulting {
-    background: transparent url("~assets/images/consulting.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/services/consulting.svg") no-repeat 0 2px;
   }
 
   &__item-cloud {
-    background: transparent url("~assets/images/cloud.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/services/cloud.svg") no-repeat 0 2px;
   }
 
   &__item-ml {
-    background: transparent url("~assets/images/ml.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/services/ml.svg") no-repeat 0 2px;
   }
 
   &__item-blockchain {
-    background: transparent url("~assets/images/blockchain.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/services/blockchain.svg") no-repeat 0 2px;
   }
 }
 </style>

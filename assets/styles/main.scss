@@ -6,6 +6,7 @@ $grayer: #828282;
 $browner: #4F4F4F;
 $white: #ffffff;
 $lighter: #E0E0E0;
+$blaker: #171717;
 
 $grid-gutter-width: 10px !default;
 
@@ -36,7 +37,7 @@ $container-max-widths: (
 @import '~bootstrap/scss/bootstrap.scss';
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
-@import '~bootstrap-vue/src/index.scss';
+//@import '~bootstrap-vue/src/index.scss';
 @import "~bootstrap/scss/mixins";
 
 @font-face {
