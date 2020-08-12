@@ -213,7 +213,7 @@ export default Vue.extend({})
 
       &__text {
         padding-left: 24px;
-        background: transparent url("/bullet.svg") no-repeat 0 3px;
+        background: transparent url("~assets/images/bullet.svg") no-repeat 0 5px;
 
         @include media-breakpoint-up(sm) {
           padding-left: 21px;
@@ -272,23 +272,27 @@ export default Vue.extend({})
       font-size: 14px;
       line-height: 140%;
       color: $browner;
+
+      @include media-breakpoint-up(lg) {
+        padding-right: 10px;
+      }
     }
   }
 
   &__item-consulting {
-    background: transparent url("/consulting.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/consulting.svg") no-repeat 0 2px;
   }
 
   &__item-cloud {
-    background: transparent url("/cloud.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/cloud.svg") no-repeat 0 2px;
   }
 
   &__item-ml {
-    background: transparent url("/ml.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/ml.svg") no-repeat 0 2px;
   }
 
   &__item-blockchain {
-    background: transparent url("/blockchain.svg") no-repeat 0 2px;
+    background: transparent url("~assets/images/blockchain.svg") no-repeat 0 2px;
   }
 }
 </style>
