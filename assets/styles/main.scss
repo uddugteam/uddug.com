@@ -7,6 +7,7 @@ $browner: #4F4F4F;
 $white: #ffffff;
 $lighter: #E0E0E0;
 $blaker: #171717;
+$black: #333333;
 
 $grid-gutter-width: 10px !default;
 
@@ -48,9 +49,9 @@ $container-max-widths: (
 }
 
 html, body {
-  background: #FFFFFF;
+  background: $white;
   font-family: 'Roboto', sans-serif;
-  color: #333333;
+  color: $black;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

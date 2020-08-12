@@ -163,6 +163,7 @@ export default {
 
   &__item {
     background: $dark;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
     color: #CECFE9;
     padding: 80px 33px;
     text-align: left;
@@ -186,7 +187,30 @@ export default {
       margin-right: 5px;
     }
 
+    &:hover {
+      background: $white;
+      color: $black;
+    }
+
+    &:hover &__title {
+      color: $blaker;
+    }
+
+    &:hover &__stack-main__unit {
+      color: $scarleter;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover &__stack-other {
+      color: $grayer;
+    }
+
+    &:hover &__stack-other__title {
+      color: $browner;
+    }
+
     &__title {
+      transition: color 0.5s;
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 500;
@@ -213,6 +237,7 @@ export default {
     &__stack-main {
 
       &__unit {
+        transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
         display: inline-block;
         padding: 6px 15px;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -221,6 +246,11 @@ export default {
         color: $white;
         font-weight: 500;
         margin-bottom: 5px;
+
+        &:hover {
+          background: $scarleter;
+          color: $white !important;
+        }
 
         @include media-breakpoint-up(lg) {
           font-size: 16px;
@@ -233,6 +263,7 @@ export default {
       font-size: 14px;
 
       &__title {
+        transition: color 0.5s;
         color: $white;
       }
     }
