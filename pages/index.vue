@@ -68,6 +68,7 @@
         </div>
       </div>
     </section>
+    <Team />
     <Projects />
     <section class="container partners">
       <h2 class="section-header">Partners</h2>
@@ -89,9 +90,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import Projects from '@/components/projects'
+import Team from '@/components/team'
 
 export default Vue.extend({
-  components: { Projects }
+  components: {
+    Team,
+    Projects
+  }
 })
 
 </script>
@@ -265,6 +270,15 @@ export default Vue.extend({
 .services {
   padding-bottom: 50px;
   border-bottom: 1px solid $lighter;
+
+  @include media-breakpoint-up(sm) {
+    border-top: 1px solid $lighter;
+    padding-top: 80px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+  }
 
   &__item {
     margin-bottom: 50px;
