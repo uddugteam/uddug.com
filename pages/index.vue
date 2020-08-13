@@ -2,7 +2,7 @@
   <div>
     <header class="container musthead">
       <h1 class="musthead__title">
-        <span class="musthead__underliner"> Production</span>-focused Development <span class="musthead__underliner musthead__title__team">Team</span>
+        <span class="musthead__underliner">Production</span>-focused Development <span class="musthead__underliner musthead__title__team">Team</span>
       </h1>
       <div class="row musthead__about">
         <div class="col-2 col-sm-1 order-sm-1">
@@ -163,21 +163,17 @@ export default Vue.extend({
     }
 
     &__title {
+      margin-top: 4px;
       font-style: normal;
       font-weight: normal;
-      font-size: 13px;
+      font-size: 11px;
       line-height: 150%;
       letter-spacing: 0.02em;
       text-transform: uppercase;
       color: $grayer;
 
       @include media-breakpoint-down(md) {
-        font-size: 11px;
-      }
-
-      @include media-breakpoint-down(xs) {
         font-size: 10px;
-        margin-top: 4px;
       }
     }
 

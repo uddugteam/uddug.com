@@ -158,6 +158,7 @@ export default {
       align-items: center;
       text-align: center;
       vertical-align: middle;
+      letter-spacing: 0;
     }
   }
 
