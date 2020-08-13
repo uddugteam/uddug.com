@@ -44,7 +44,7 @@ export default {
         infinite: true,
         focusOnSelect: true,
         centerMode: true,
-        centerPadding: '30px',
+        centerPadding: '60px',
         responsive: [
           {
             breakpoint: 769,
@@ -55,7 +55,8 @@ export default {
           {
             breakpoint: 376,
             settings: {
-              slidesToShow: 1
+              slidesToShow: 1,
+              centerPadding: '30px'
             }
           }
         ]
