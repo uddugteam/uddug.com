@@ -8,6 +8,7 @@ $white: #ffffff;
 $lighter: #E0E0E0;
 $blaker: #171717;
 $black: #333333;
+$bluer: #CECFE9;
 
 $grid-gutter-width: 10px !default;
 
@@ -38,6 +39,13 @@ $container-max-widths: (
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
+
+/*@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  src: url("~assets/fonts/Montserrat-Regular.ttf") format('ttf');
+}*/
 
 @font-face {
   font-family: 'Montserrat';

@@ -20,7 +20,12 @@
           </svg>
         </nuxt-link>
         <ul class="navbar-nav justify-content-end">
-          <li>Contacts</li>
+          <nuxt-link
+            to="#footer"
+            tag="li"
+          >
+            Contacts
+          </nuxt-link>
         </ul>
       </nav>
     </div>

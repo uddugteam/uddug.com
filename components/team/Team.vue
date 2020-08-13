@@ -25,6 +25,7 @@
               <img class="carousel__item__social__icon" src="~/assets/images/social/facebook.svg">
               <img class="carousel__item__social__icon" src="~/assets/images/social/linkedin.svg">
               <img class="carousel__item__social__icon" src="~/assets/images/social/twitter.svg">
+              <img class="carousel__item__social__icon" src="~/assets/images/social/github.svg">
             </div>
           </div>
         </div>
