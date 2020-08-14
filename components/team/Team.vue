@@ -54,9 +54,16 @@ export default {
             }
           },
           {
+            breakpoint: 1025,
+            settings: {
+              centerPadding: '40px'
+            }
+          },
+          {
             breakpoint: 769,
             settings: {
-              slidesToShow: 3
+              slidesToShow: 3,
+              centerPadding: '20px'
             }
           },
           {
@@ -105,7 +112,7 @@ export default {
 
   &__item {
     height: 539px;
-    //width: 285px;
+    width: 285px;
     padding-top: 51px;
     margin: 0 9px;
     border: 1px solid $lighter;
@@ -113,9 +120,7 @@ export default {
     border-radius: 15px;
     text-align: center;
 
-
-
-    /*@include media-breakpoint-only(lg) {
+    @include media-breakpoint-only(lg) {
       width: 265px;
     }
 
@@ -125,7 +130,7 @@ export default {
 
     @include media-breakpoint-only(sm) {
       width: 202px;
-    }*/
+    }
 
     @include media-breakpoint-between(sm, md) {
       height: 448px;
