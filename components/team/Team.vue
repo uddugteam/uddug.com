@@ -56,7 +56,7 @@ export default {
           {
             breakpoint: 1025,
             settings: {
-              centerPadding: '40px'
+              centerPadding: '50px'
             }
           },
           {
@@ -84,37 +84,38 @@ export default {
 @import "../../assets/styles/main";
 
 .team {
-  padding: 100px 0 140px 0;
+  padding: 100px 0 80px 0;
 
   @include media-breakpoint-only(md) {
-    padding-bottom: 177px;
+    padding-bottom: 117px;
   }
 
   @include media-breakpoint-only(sm) {
-    padding-bottom: 120px;
+    padding-bottom: 60px;
   }
 
   @include media-breakpoint-only(xs) {
-    padding-bottom: 115px;
+    padding-bottom: 55px;
   }
 }
 
 .carousel {
-  margin-top: 50px;
+  padding-top: 50px;
 
   @include media-breakpoint-only(sm) {
-    margin-top: 17px;
+    padding-top: 17px;
   }
 
   @include media-breakpoint-only(xs) {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   &__item {
+    transition: margin-top 0.5s, box-shadow 0.5s;
     height: 539px;
     width: 285px;
+    margin: 0 9px 60px;
     padding-top: 51px;
-    margin: 0 9px;
     border: 1px solid $lighter;
     box-sizing: border-box;
     border-radius: 15px;
@@ -134,6 +135,12 @@ export default {
 
     @include media-breakpoint-between(sm, md) {
       height: 448px;
+    }
+
+    &:hover {
+      box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
+      margin-top: -10px;
+      border: none;
     }
 
     &__image {
@@ -190,10 +197,6 @@ export default {
     &__social {
       text-align: center;
       margin-top: 35px;
-      //position: relative;
-      //bottom: 41px;
-      //left: -50%;
-      //margin-left: 50%;
 
       &__icon {
         display: inline !important;
