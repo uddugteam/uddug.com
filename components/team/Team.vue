@@ -54,7 +54,7 @@ export default {
             }
           },
           {
-            breakpoint: 376,
+            breakpoint: 426,
             settings: {
               slidesToShow: 1,
               centerPadding: '30px'
