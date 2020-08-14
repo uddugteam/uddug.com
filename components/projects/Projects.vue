@@ -171,6 +171,7 @@ export default {
     border-radius: 10px;
     font-size: 14px;
     margin-bottom: 20px;
+    user-select: none;
 
     @include media-breakpoint-up(xl) {
       padding: 90px 100px;
