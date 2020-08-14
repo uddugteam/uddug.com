@@ -199,7 +199,6 @@ export default Vue.extend({
       font-size: 15px;
       line-height: 120%;
       color: $white;
-      cursor: help;
 
       &:hover {
         background: $white;

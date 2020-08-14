@@ -5,11 +5,23 @@
         <span class="projects__title__technologies">Technologies</span>
       </h2>
       <div class="row">
-        <div class="col-12 col-sm-6">
+        <div v-for="i in 5" :key="i" class="col-12 col-sm-6">
           <div class="projects__item">
-            <h3 class="projects__item__title">
-              Trusted Health Consul
-            </h3>
+            <div class="row">
+              <div class="col-auto mr-auto">
+                <h3 class="projects__item__title">
+                  Trusted Health Consul
+                </h3>
+              </div>
+              <div class="col-auto">
+                <nuxt-link
+                  to="/"
+                  class="projects__item__link d-md-block d-none"
+                >
+                  Visit project →
+                </nuxt-link>
+              </div>
+            </div>
             <p class="projects__item__text">Platform perform deep analisys of the medical data using machine learning algoritms. Peer-to-peer database architecture provides secure and anonymous data.</p>
             <div class="projects__item__stack-main">
               <div class="projects__item__stack-main__unit">
@@ -46,37 +58,12 @@
               <span class="projects__item__stack-other__unit">Gcp,</span>
               <span class="projects__item__stack-other__unit">Docker.</span>
             </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6">
-          <div class="projects__item">
-            <h3 class="projects__item__title">
-              Cryptozaur
-            </h3>
-            <p class="projects__item__text">Platform for creating and interacting with crypto faucets, based on micropayments x4 coins. 2014 - the world top 10 faucets.</p>
-            <div class="projects__item__stack-main">
-              <div class="projects__item__stack-main__unit">
-                Go
-              </div>
-              <div class="projects__item__stack-main__unit">
-                Ethereun
-              </div>
-              <div class="projects__item__stack-main__unit">
-                Solidity
-              </div>
-              <div class="projects__item__stack-main__unit">
-                PostgreSQL
-              </div>
-              <div class="projects__item__stack-main__unit">
-                Laravel
-              </div>
-            </div>
-            <div class="projects__item__stack-other">
-              <span class="projects__item__stack-other__title">Other Technologies:</span>
-              <span class="projects__item__stack-other__unit">Php,</span>
-              <span class="projects__item__stack-other__unit">Js,</span>
-              <span class="projects__item__stack-other__unit">Linux.</span>
-            </div>
+            <nuxt-link
+              to="/"
+              class="projects__item__link d-md-none"
+            >
+              Visit project →
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -166,27 +153,28 @@ export default {
     background: $dark;
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
     color: #CECFE9;
-    padding: 80px 33px;
+    padding: 80px 33px 0;
     text-align: left;
     border-radius: 10px;
     font-size: 14px;
     margin-bottom: 20px;
     user-select: none;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-only(xl) {
       padding: 90px 100px;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-only(lg) {
       padding: 90px 80px;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-only(md) {
       padding: 80px 57px;
     }
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-only(sm) {
       margin-right: 5px;
+      height: 515px;
     }
 
     &:hover {
@@ -196,6 +184,10 @@ export default {
 
     &:hover &__title {
       color: $blaker;
+    }
+
+    &:hover &__link {
+      color: $scarleter;
     }
 
     &:hover &__stack-main__unit {
@@ -236,6 +228,15 @@ export default {
       }
     }
 
+    &__link {
+      color: $bluer;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+      text-decoration-line: underline;
+    }
+
     &__stack-main {
 
       &__unit {
@@ -268,6 +269,8 @@ export default {
         transition: color 0.5s;
         color: $white;
       }
+
+      margin-bottom: 20px;
     }
   }
 }
