@@ -25,11 +25,20 @@
     </div>
     <div class="mustfooter__bottom container">
       <div class="row">
-        <div class="col-auto mr-auto mustfooter__bottom__item">
-          <p>Uddùg LTD, 2020</p>
+        <div class="col-sm-auto mr-sm-auto col-12 order-1">
+          <p class="copyrights">Uddùg LTD, 2020</p>
         </div>
-        <div class="col-auto mustfooter__bottom__item">
-          <p>info@uddug.com</p>
+        <div class="col-sm-auto mustfooter__bottom__social col-6 order-4 order-sm-2">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/facebook-footer.svg">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/linkedin-footer.svg">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/twitter-footer.svg">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/github-footer.svg">
+        </div>
+        <div class="col-sm-auto col-12 order-2 order-sm-3">
+          <p class="mustfooter__bottom__contact icon-mail">info@uddug.com</p>
+        </div>
+        <div class="col-sm-auto col-6 order-3 order-sm-4">
+          <p class="mustfooter__bottom__contact icon-phone">+1 (234) 567 89 00</p>
         </div>
       </div>
     </div>
@@ -152,12 +161,67 @@ export default {
   }
 
   &__bottom {
-    padding: 32px 0 110px 0;
+    padding: 28px 0 110px 0;
     border-top: 1px solid $darker;
 
-    &__item {
-      padding: 0;
+    @include media-breakpoint-only(md) {
+      padding-bottom: 98px;
+    }
+
+    @include media-breakpoint-only(sm) {
+      padding: 32px 0 52px 0;
+    }
+
+    @include media-breakpoint-only(xs) {
+      padding: 32px 0 45px 0;
+    }
+
+    &__social {
+      @include media-breakpoint-only(xs) {
+        padding-left: 12px;
+      }
+
+      &__icon {
+        margin-right: 40px;
+
+        @include media-breakpoint-only(sm) {
+          margin-right: 30px;
+        }
+
+        @include media-breakpoint-only(xs) {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    p {
+      padding-top: 4px;
     }
   }
+}
+
+.copyrights {
+  @include media-breakpoint-only(xs) {
+    margin-bottom: 22px;
+  }
+}
+
+.icon-mail {
+  background: transparent url("~assets/images/communications/email.svg") no-repeat;
+  padding-left: 28.25px;
+  margin-right: 42px;
+
+  @include media-breakpoint-only(sm) {
+    margin-right: 30px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    margin-bottom: 18px;
+  }
+}
+
+.icon-phone {
+  background: transparent url("~assets/images/communications/call.svg") no-repeat;
+  padding-left: 26.37px;
 }
 </style>
