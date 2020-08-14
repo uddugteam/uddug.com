@@ -45,8 +45,14 @@ export default {
         infinite: true,
         focusOnSelect: true,
         centerMode: true,
-        centerPadding: '60px',
+        centerPadding: '80px',
         responsive: [
+          {
+            breakpoint: 1281,
+            settings: {
+              centerPadding: '60px'
+            }
+          },
           {
             breakpoint: 769,
             settings: {
@@ -99,12 +105,27 @@ export default {
 
   &__item {
     height: 539px;
+    //width: 285px;
     padding-top: 51px;
     margin: 0 9px;
     border: 1px solid $lighter;
     box-sizing: border-box;
     border-radius: 15px;
     text-align: center;
+
+
+
+    /*@include media-breakpoint-only(lg) {
+      width: 265px;
+    }
+
+    @include media-breakpoint-only(md) {
+      width: 211px;
+    }
+
+    @include media-breakpoint-only(sm) {
+      width: 202px;
+    }*/
 
     @include media-breakpoint-between(sm, md) {
       height: 448px;

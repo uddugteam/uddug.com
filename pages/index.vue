@@ -195,7 +195,7 @@ export default Vue.extend({
       border-radius: 10px;
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 400;
       font-size: 15px;
       line-height: 120%;
       color: $white;
