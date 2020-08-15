@@ -2,30 +2,29 @@
   <section class="team">
     <div class="container">
       <h2 class="section-header">
-        Our team
+        {{ title }}
       </h2>
     </div>
     <div class="carousel">
       <VueSlickCarousel v-bind="slickOptions">
-        <div v-for="i in 5" :key="i">
+        <div v-for="t in team" :key="t.name">
           <div class="carousel__item">
-            <img class="carousel__item__image" src="~/assets/images/team/as.jpg">
+            <img class="carousel__item__image" :src="require(`~/assets/images/team/${t.photo}`)" :alt="t.name">
             <h2 class="carousel__item__name">
-              Andrew Skurlatov
+              {{ t.name }}
             </h2>
             <h3 class="carousel__item__position">
-              Technical Lead
+              {{ t.position }}
             </h3>
             <ul class="carousel__item__roles">
-              <li>Backend implementation</li>
-              <li>Technical Consulting</li>
-              <li>Blockchain development</li>
+              <li v-for="r in t.roles" :key="r">
+                {{ r }}
+              </li>
             </ul>
             <div class="carousel__item__social">
-              <img class="carousel__item__social__icon" src="~/assets/images/social/facebook.svg">
-              <img class="carousel__item__social__icon" src="~/assets/images/social/linkedin.svg">
-              <img class="carousel__item__social__icon" src="~/assets/images/social/twitter.svg">
-              <img class="carousel__item__social__icon" src="~/assets/images/social/github.svg">
+              <a v-for="s in t.social" :key="s.type" :href="s.link" target="_blank">
+                <img class="carousel__item__social__icon" :src="require(`~/assets/images/social/${s.type}.svg`)" :alt="s.type">
+              </a>
             </div>
           </div>
         </div>
@@ -35,9 +34,143 @@
 </template>
 
 <script lang="ts">
+
+interface Team {
+  name: string
+  photo: string
+  position: string
+  roles: string[]
+  social: Social[]
+}
+
+interface Social {
+  type: string
+  link: string
+}
+
 export default {
+  name: 'Team',
   data () {
     return {
+      title: 'Our team',
+      team: [
+        {
+          name: 'Andrew Skurlatov',
+          photo: 'as.jpg',
+          position: 'Technical Lead',
+          roles: [
+            'Architecture design',
+            'Backend implementation',
+            'Blockchain development'
+          ],
+          social: [
+            {
+              type: 'facebook',
+              link: 'https://www.facebook.com/andrey.skurlatov'
+            },
+            {
+              type: 'linkedin',
+              link: 'https://www.linkedin.com/in/andrew-skurlatov/'
+            },
+            {
+              type: 'github',
+              link: 'https://github.com/andskur'
+            },
+            {
+              type: 'twitter',
+              link: 'https://twitter.com/Andskur1'
+            }
+          ]
+        },
+        {
+          name: 'Mike Manko',
+          photo: 'mm.jpg',
+          position: 'Project Manager',
+          roles: [
+            'Team Management',
+            'Business Development',
+            'Social Communication'
+          ],
+          social: [
+            {
+              type: 'facebook',
+              link: 'https://www.facebook.com/stones.rolling.31'
+            },
+            {
+              type: 'linkedin',
+              link: 'https://www.linkedin.com/in/mikhail-manko-97a491a2/'
+            },
+            {
+              type: 'github',
+              link: 'https://github.com/MikeMS-sys'
+            }
+          ]
+        },
+        {
+          name: 'Ivan Podtsebnev',
+          photo: 'ip.jpg',
+          position: 'DevOps Engineer',
+          roles: [
+            'DevOps Practices',
+            'Cloud Infrastructure',
+            'Security'
+          ],
+          social: [
+            {
+              type: 'facebook',
+              link: 'https://www.facebook.com/ivan.podtsebnev'
+            },
+            {
+              type: 'linkedin',
+              link: 'https://www.linkedin.com/in/naykip/'
+            },
+            {
+              type: 'github',
+              link: 'https://github.com/naykip'
+            }
+          ]
+        },
+        {
+          name: 'Nikita Velko',
+          photo: 'nv.jpg',
+          position: 'Senior Frontend Developer',
+          roles: [
+            'Frontend Implementation',
+            'Architecture Design',
+            'Client-side Developing'
+          ],
+          social: [
+            {
+              type: 'facebook',
+              link: 'https://www.facebook.com/n1ckgreat'
+            },
+            {
+              type: 'linkedin',
+              link: 'https://www.linkedin.com/in/nikichv/'
+            },
+            {
+              type: 'github',
+              link: 'https://github.com/nikichv'
+            }
+          ]
+        },
+        {
+          name: 'Anuar Zhumaev',
+          photo: 'az.jpg',
+          position: 'Ui/Ux Designer',
+          roles: [
+            'Ui/Ux Design',
+            'User Flow',
+            'Graphic Design'
+          ],
+          social: [
+            {
+              type: 'linkedin',
+              link: 'https://www.linkedin.com/in/yxorama/'
+            }
+          ]
+        }
+      ] as Team[],
       slickOptions: {
         slidesToShow: 4,
         slidesToScroll: 1,

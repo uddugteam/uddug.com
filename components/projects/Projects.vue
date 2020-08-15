@@ -1,69 +1,42 @@
 <template>
   <section class="projects">
     <div class="container">
-      <h2 class="projects__title">Our projects<span class="projects__title__and">and</span>
+      <h2 class="projects__title">
+        Our projects<span class="projects__title__and">and</span>
         <span class="projects__title__technologies">Technologies</span>
       </h2>
       <div class="row">
-        <div v-for="i in 5" :key="i" class="col-12 col-sm-6">
+        <div v-for="p in projects" :key="p.name" class="col-12 col-sm-6">
           <div class="projects__item">
             <div class="row">
               <div class="col-auto mr-auto">
                 <h3 class="projects__item__title">
-                  Trusted Health Consul
+                  {{ p.name }}
                 </h3>
               </div>
               <div class="col-auto">
-                <nuxt-link
-                  to="/"
-                  class="projects__item__link d-md-block d-none"
-                >
+                <a v-if="p.url !== ''" class="projects__item__link d-md-block d-none" :href="p.url" target="_blank">
                   Visit project →
-                </nuxt-link>
+                </a>
               </div>
             </div>
-            <p class="projects__item__text">Platform perform deep analisys of the medical data using machine learning algoritms. Peer-to-peer database architecture provides secure and anonymous data.</p>
+            <p class="projects__item__text">
+              {{ p.description }}
+            </p>
             <div class="projects__item__stack-main">
-              <div class="projects__item__stack-main__unit">
-                Rust
-              </div>
-              <div class="projects__item__stack-main__unit">
-                Substrate
-              </div>
-              <div class="projects__item__stack-main__unit">
-                Polkadot
-              </div>
-              <div class="projects__item__stack-main__unit">
-                Healthcare.ai
-              </div>
-              <div class="projects__item__stack-main__unit">
-                Terraform
-              </div>
-              <div class="projects__item__stack-main__unit">
-                GKE
-              </div>
-              <div class="projects__item__stack-main__unit">
-                React
-              </div>
-              <div class="projects__item__stack-main__unit">
-                IPFS
+              <div v-for="(t, i) in p.stack.main" :key="i" class="projects__item__stack-main__unit">
+                {{ t }}
               </div>
             </div>
             <div class="projects__item__stack-other">
               <span class="projects__item__stack-other__title">Other Technologies:</span>
-              <span class="projects__item__stack-other__unit">POA,</span>
-              <span class="projects__item__stack-other__unit">LibP2P,</span>
-              <span class="projects__item__stack-other__unit">Python,</span>
-              <span class="projects__item__stack-other__unit">Swagger,</span>
-              <span class="projects__item__stack-other__unit">Gcp,</span>
-              <span class="projects__item__stack-other__unit">Docker.</span>
+              <span v-for="(t, i) in p.stack.other" :key="i" class="projects__item__stack-other__unit">
+                {{ t }}<span v-if="i !== Object.keys(p.stack.other).length - 1">, </span>
+              </span>
             </div>
-            <nuxt-link
-              to="/"
-              class="projects__item__link d-md-none"
-            >
+            <a v-if="p.url !== ''" class="projects__item__link d-md-none" :href="p.url" target="_blank">
               Visit project →
-            </nuxt-link>
+            </a>
           </div>
         </div>
       </div>
@@ -72,8 +45,227 @@
 </template>
 
 <script lang="ts">
+
+interface Project {
+  name: string,
+  url: string,
+  description: string,
+  stack: {
+    main: string[],
+    other: string[]
+  }
+}
+
 export default {
-  name: 'Projects'
+  name: 'Projects',
+  data () {
+    return {
+      projects: [
+        {
+          name: 'Trusted Health Consul',
+          description: 'Platform perform deep analisys of the medical data using machine learning algoritms. Peer-to-peer database architecture provides secure and anonymous data.',
+          stack: {
+            main: [
+              'Rust',
+              'Substrate',
+              'Polkadot',
+              'IPFS',
+              'GKE',
+              'Healthcare.ai',
+              'React',
+              'Terraform'
+            ],
+            other: [
+              'LibP2P',
+              'POA',
+              'Python',
+              'Swagger',
+              'Kubernetes',
+              'GCP',
+              'Docker'
+            ]
+          },
+          url: ''
+        },
+        {
+          name: 'Kickstox',
+          description: 'Kickstox aims to become the online reference point for football fans who want to connect, to compete, and to check scores and stats. We desire Kickstox to become part of the football conversation among groups of friends whenever, wherever.',
+          stack: {
+            main: [
+              'Go',
+              'PostgreSql',
+              'RabbitMq',
+              'GKE',
+              'Terraform',
+              'React',
+              'MQTT'
+            ],
+            other: [
+              'Microservices',
+              'Nats',
+              'Redis',
+              'Kubernetes',
+              'GCP',
+              'Swagger',
+              'Docker',
+              'GRPC',
+              'Ansible'
+            ]
+          },
+          url: 'https://kickstox.com'
+        },
+        {
+          name: 'Snark.art',
+          description: 'Snark.art uses the power of blockchain as a creative media to change the way art is made and collected.',
+          stack: {
+            main: [
+              'Go',
+              'Ethereum',
+              'Solidity',
+              'Nats',
+              'GRPC',
+              'PostgreSql',
+              'Swagger',
+              'React',
+              'EKS'
+            ],
+            other: [
+              'Node.js',
+              'Microservices',
+              'Redis',
+              'AWS',
+              'Kubernetes',
+              'S3',
+              'Docker',
+              'Next.js',
+              'Web3.js',
+              'Angular2',
+              'stripe',
+              'ffmpeg'
+            ]
+          },
+          url: 'https://snark.art'
+        },
+        {
+          name: 'ZamZam',
+          description: 'Digital bank realises international money transfers lean on p2p billing system architecture.',
+          stack: {
+            main: [
+              'Go',
+              'Stellar',
+              'Ethereum',
+              'Bitcoin',
+              'GRPC',
+              'PostgreSql',
+              'Vue.js',
+              'Swift',
+              'Kotlin'
+            ],
+            other: [
+              'Redis',
+              'Kubernetes',
+              'Microservices',
+              'Nats',
+              'Docker',
+              'Nuxt.js',
+              'MVVC',
+              'Viper'
+            ]
+          },
+          url: 'https://zam.io'
+        },
+        {
+          name: 'ICEX',
+          description: 'Cryptocurrency exchange which properly includes group of site-projects to create a full-fledged financial ecosystem including: wallets, funds, indicative tools, analytical center, trading core (various trading sectors, opportunity to be a company sub-broker).',
+          stack: {
+            main: [
+              'C++',
+              'Go',
+              'PHP',
+              'Laravel',
+              'Ethereum',
+              'Solidity',
+              'Bitcoin',
+              'Vue.js',
+              'HighCharts',
+              'Redis'
+            ],
+            other: [
+              'PostgreSql',
+              'Docker',
+              'Nuxt.js',
+              'Litecoin',
+              'Ripple',
+              'Stellar',
+              'Monero',
+              'Dash',
+              'Dogecoin',
+              'Iota',
+              'Cardano'
+            ]
+          },
+          url: 'https://github.com/icexch'
+        },
+        {
+          name: 'YourAdsMedia',
+          description: 'RTB ad network includes various payment system components like payments via cryptocurrencies and credit cards. System allows publishers to place promotional materials on the advertisers channels.',
+          stack: {
+            main: [
+              'PHP',
+              'Laravel',
+              'Bitcoin',
+              'JavaScript',
+              'Redis'
+            ],
+            other: [
+              'Jquery',
+              'Mysql',
+              'D3.js'
+            ]
+          },
+          url: ''
+        },
+        {
+          name: 'Cryptozaur',
+          description: 'Platform for creating and interacting with crypto faucets, based on micropayments for x4 coins. 2014 - the world top 10 faucets.',
+          stack: {
+            main: [
+              'PHP',
+              'Laravel',
+              'Bitcoin',
+              'JavaScript',
+              'Redis'
+            ],
+            other: [
+              'Jquery',
+              'Mysql',
+              'Litecoin',
+              'Dogecoin'
+            ]
+          },
+          url: ''
+        },
+        {
+          name: 'Roumboutique',
+          description: 'The development of the system for IT optimisation such business processes as international distribution, promotion and sale of alcoholic beverages for all divisions within the company.',
+          stack: {
+            main: [
+              'PHP',
+              'Laravel',
+              'Mysql',
+              'JavaScript'
+            ],
+            other: [
+              'Jquery',
+              'Symphony',
+              'Redis'
+            ]
+          },
+          url: ''
+        }
+      ] as Project[]
+    }
+  }
 }
 </script>
 
@@ -159,6 +351,7 @@ export default {
     font-size: 14px;
     margin-bottom: 20px;
     user-select: none;
+    height: 515px;
 
     @include media-breakpoint-only(xl) {
       padding: 90px 100px;
@@ -174,7 +367,10 @@ export default {
 
     @include media-breakpoint-only(sm) {
       margin-right: 5px;
-      height: 515px;
+    }
+
+    @include media-breakpoint-only(xs) {
+      height: auto;
     }
 
     &:hover {
@@ -249,6 +445,7 @@ export default {
         color: $white;
         font-weight: 500;
         margin-bottom: 5px;
+        margin-right: 5px;
 
         &:hover {
           background: $scarleter;

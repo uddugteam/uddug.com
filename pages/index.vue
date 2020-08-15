@@ -11,59 +11,55 @@
           </h3>
         </div>
         <div class="col-10 col-sm-5 order-sm-2 col-md-6 col-lg-5">
-          <p class="musthead__about__text">We combine proven methodologies, business domain knowledge and technology expertise of skilled software professionals to deliver highly optimized solutions and services across wide range of industry domains.</p>
+          <p class="musthead__about__text">
+            {{ about[0] }}
+          </p>
         </div>
         <div class="offset-sm-1 order-sm-3 d-none d-sm-block d-md-none" />
         <div class="offset-2 d-block d-sm-none" />
         <div class="col-10 col-sm-4 order-sm-6 order-md-3 col-lg-3 ">
-          <p class="musthead__about__text">Our projects are different, but all of them share the need to have a software solution</p>
+          <p class="musthead__about__text">
+            {{ about[1] }}
+          </p>
         </div>
         <div class="offset-lg-3 order-lg-4 d-md-none d-lg-block" />
         <div class="offset-lg-1 order-lg-4 d-md-none d-lg-block" />
         <div class="col-12 col-sm-5 order-sm-4 order-md-4 col-md-4 col-lg-3">
           <div class="musthead__about__item">
-            <p class="musthead__about__item__text"><span class="break-line">Experienced</span><span class="break-line"> and cross-functional</span></p>
+            <p class="musthead__about__item__text">
+              <span class="break-line">{{ advantages[0][0] }}</span><span class="break-line">{{ advantages[0][1] }}</span>
+            </p>
           </div>
         </div>
         <div class="offset-sm-1 order-sm-5 d-none d-sm-block d-md-none" />
         <div class="offset-sm-2 order-sm-7 d-none d-sm-block d-md-none" />
         <div class="col-12 col-sm-5 order-sm-8 col-md-4">
           <div class="musthead__about__item musthead__about__item-centre">
-            <p class="musthead__about__item__text"><span class="break-line">Modern stack</span><span class="break-line"> (latest technology trends)</span></p>
+            <p class="musthead__about__item__text">
+              <span class="break-line">{{ advantages[1][0] }}</span><span class="break-line">{{ advantages[1][1] }}</span>
+            </p>
           </div>
         </div>
         <div class="offset-sm-7 order-sm-9 d-none d-sm-block d-md-none" />
         <div class="col-12 col-sm-5 order-sm-10 mr-sm-auto col-md-4 col-lg-3">
           <div class="musthead__about__item musthead__about__item-last">
-            <p class="musthead__about__item__text"><span class="break-line">Trusted</span><span class="break-line"> development partner</span></p>
+            <p class="musthead__about__item__text">
+              <span class="break-line">{{ advantages[2][0] }}</span><span class="break-line">{{ advantages[2][1] }}</span>
+            </p>
           </div>
         </div>
       </div>
     </header>
     <section class="container services">
       <div class="row">
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="services__item services__item-consulting">
-            <h3 class="services__item__title">Technical Consulting</h3>
-            <p class="services__item__text">Advice on the strategic employment of modern technologies based on a thorough analysis and experience.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="services__item services__item-cloud">
-            <h3 class="services__item__title">Cloud Infrastructure</h3>
-            <p class="services__item__text">Using DevOps best practises such to design and implement most related solutions for all major cloud providers.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="services__item services__item-ml">
-            <h3 class="services__item__title">Machine Learning</h3>
-            <p class="services__item__text">Modern applications for all platforms builded with world best design patterns and technologies.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="services__item services__item-blockchain">
-            <h3 class="services__item__title">Blockchain Developing</h3>
-            <p class="services__item__text">Decentralized applications and distributed services powered by public and private blockchain networks.</p>
+        <div v-for="(s, i) in services" :key="i" class="col-12 col-sm-6 col-lg-3">
+          <div class="services__item services__item-consulting" :class="s.icon">
+            <h3 class="services__item__title">
+              {{ s.title }}
+            </h3>
+            <p class="services__item__text">
+              {{ s.description }}
+            </p>
           </div>
         </div>
       </div>
@@ -71,16 +67,20 @@
     <Team />
     <Projects />
     <section class="container partners">
-      <h2 class="section-header">Partners</h2>
+      <h2 class="section-header">
+        {{ partners.title }}
+      </h2>
       <div class="row">
         <div class="col-sm-5 order-sm-2 partners__logos">
-          <img src="~/assets/images/partners/kickstox.svg">
-          <img src="~/assets/images/partners/snark.svg">
-          <img src="~/assets/images/partners/lime.svg">
+          <a v-for="(p, i) in partners.partners" :key="i" :href="p.url" target="_blank">
+            <img :src="require(`~/assets/images/partners/${p.logo}`)" :alt="p.name">
+          </a>
         </div>
-        <div class="offset-sm-1 order-sm-1"></div>
+        <div class="offset-sm-1 order-sm-1" />
         <div class="col-12 col-sm-6 col-md-4 col-xl-3 order-sm-0">
-          <p class="partners__text">We are proud of our partners who support us every step of the way.</p>
+          <p class="partners__text">
+            {{ partners.description }}
+          </p>
         </div>
       </div>
     </section>
@@ -92,10 +92,90 @@ import Vue from 'vue'
 import Projects from '@/components/projects'
 import Team from '@/components/team'
 
+interface Service {
+  title: string
+  description: string
+  icon: string
+}
+
+interface Partner {
+  name: string
+  logo: string
+  url: string
+}
+
 export default Vue.extend({
   components: {
     Team,
     Projects
+  },
+  data () {
+    return {
+      about: [
+        `We combine proven methodologies, business domain knowledge and technology
+expertise of skilled software professionals to deliver highly optimized solutions and
+services across wide range of industry domains.`,
+        `Our projects are different, but all of
+them share the need to have a software solution.`
+      ],
+      advantages: [
+        [
+          'Experienced',
+          'and cross-functional'
+        ],
+        [
+          'Modern stack',
+          '(latest technology trends)'
+        ],
+        [
+          'Trusted',
+          'development partner'
+        ]
+      ],
+      services: [
+        {
+          title: 'Technical Consulting',
+          description: 'Advice on the strategic employment of modern technologies based on a thorough analysis and experience.',
+          icon: 'icon-consulting'
+        },
+        {
+          title: 'Cloud Infrastructure',
+          description: 'Using DevOps best practises to design and implement most related solutions for all major cloud providers.',
+          icon: 'icon-cloud'
+        },
+        {
+          title: 'Machine Learning',
+          description: 'Artificially intelligent machines are able to sift through and interpret massive amounts of data from various sources to carry out a wide range of tasks.',
+          icon: 'icon-ml'
+        },
+        {
+          title: 'Blockchain Developing',
+          description: 'Decentralized applications and distributed services powered by public and private blockchain networks.',
+          icon: 'icon-blockchain'
+        }
+      ] as Service[],
+      partners: {
+        title: 'Partners',
+        description: 'We are proud of our partners who support us every step of the way.',
+        partners: [
+          {
+            name: 'kickstox',
+            logo: 'kickstox.svg',
+            url: 'https://kickstox.com'
+          },
+          {
+            name: 'snark',
+            logo: 'snark.svg',
+            url: 'https://snark.art'
+          },
+          {
+            name: 'lime',
+            logo: 'lime.svg',
+            url: 'http://lime-expo.ru'
+          }
+        ] as Partner[]
+      }
+    }
   }
 })
 
@@ -305,22 +385,6 @@ export default Vue.extend({
       }
     }
   }
-
-  &__item-consulting {
-    background: transparent url("~assets/images/services/consulting.svg") no-repeat 0 2px;
-  }
-
-  &__item-cloud {
-    background: transparent url("~assets/images/services/cloud.svg") no-repeat 0 2px;
-  }
-
-  &__item-ml {
-    background: transparent url("~assets/images/services/ml.svg") no-repeat 0 2px;
-  }
-
-  &__item-blockchain {
-    background: transparent url("~assets/images/services/blockchain.svg") no-repeat 0 2px;
-  }
 }
 
 .partners {
@@ -354,5 +418,21 @@ export default Vue.extend({
       margin-right: 30px;
     }
   }
+}
+
+.icon-consulting {
+  background: transparent url("~assets/images/services/consulting.svg") no-repeat 0 2px;
+}
+
+.icon-cloud {
+  background: transparent url("~assets/images/services/cloud.svg") no-repeat 0 2px;
+}
+
+.icon-ml {
+  background: transparent url("~assets/images/services/ml.svg") no-repeat 0 2px;
+}
+
+.icon-blockchain {
+  background: transparent url("~assets/images/services/blockchain.svg") no-repeat 0 2px;
 }
 </style>
