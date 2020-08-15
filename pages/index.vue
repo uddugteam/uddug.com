@@ -2,7 +2,7 @@
   <div>
     <header class="container musthead">
       <h1 class="musthead__title">
-        <span class="musthead__underliner">Production</span>-focused Development <span class="musthead__underliner musthead__title__team">Team</span>
+        <span v-scroll-to="'#projects'" class="musthead__underliner">Production</span>-focused Development <span v-scroll-to="'#team'" class="musthead__underliner musthead__title__team">Team</span>
       </h1>
       <div class="row musthead__about">
         <div class="col-2 col-sm-1 order-sm-1">
@@ -64,8 +64,8 @@
         </div>
       </div>
     </section>
-    <Team />
-    <Projects />
+    <Team id="team" />
+    <Projects id="projects" />
     <section class="container partners">
       <h2 class="section-header">
         {{ partners.title }}
@@ -91,6 +91,9 @@
 import Vue from 'vue'
 import Projects from '@/components/projects'
 import Team from '@/components/team'
+import VueScrollTo from 'vue-scrollto'
+
+Vue.use(VueScrollTo)
 
 interface Service {
   title: string
