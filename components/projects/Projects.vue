@@ -371,6 +371,7 @@ export default {
 
     @include media-breakpoint-only(xs) {
       height: auto;
+      padding-bottom: 33px;
     }
 
     &:hover {
