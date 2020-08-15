@@ -172,6 +172,11 @@ them share the need to have a software solution.`
             name: 'lime',
             logo: 'lime.svg',
             url: 'http://lime-expo.ru'
+          },
+          {
+            name: 'regionconsalt',
+            logo: 'regionconsalt.png',
+            url: 'http://regionc.ru'
           }
         ] as Partner[]
       }
@@ -200,6 +205,7 @@ them share the need to have a software solution.`
     // TODO need corner radius for underline
     text-decoration: underline;
     text-decoration-color: $scarleter;
+    cursor: pointer;
   }
 
   &__title {
@@ -416,6 +422,7 @@ them share the need to have a software solution.`
 
     img {
       margin-right: 30px;
+      height: 40px;
     }
   }
 }
