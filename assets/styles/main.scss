@@ -40,7 +40,17 @@ $container-max-widths: (
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+@font-face {
+  font-family: 'Montserrat';
+  src: url("~assets/fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("~assets/fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
 
 html, body {
   background: $white;
