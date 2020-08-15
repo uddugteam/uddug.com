@@ -3,7 +3,9 @@
     <div class="mustfooter__contacts container">
       <div class="row">
         <div class="col-12 col-md-4">
-          <h2 class="mustfooter__contacts__title">Got any ideas?<span class="mustfooter__contacts__title__break"> Let’s talk.</span></h2>
+          <h2 class="mustfooter__contacts__title">
+            Got any ideas?<span class="mustfooter__contacts__title__break"> Let’s talk.</span>
+          </h2>
         </div>
         <div class="offset-lg-1" />
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -17,8 +19,10 @@
         <div class="col-12 col-sm-6 col-md-4">
           <div class="mustfooter__contacts__form">
             <label for="contactThoughts">Thoughts</label>
-            <textarea id="contactThoughts" placeholder="Tell us your thoughts"/>
-            <button id="contactSubmit">Submit</button>
+            <textarea id="contactThoughts" placeholder="Tell us your thoughts" />
+            <button id="contactSubmit">
+              Submit
+            </button>
           </div>
         </div>
       </div>
@@ -26,19 +30,25 @@
     <div class="mustfooter__bottom container">
       <div class="row">
         <div class="col-sm-auto mr-sm-auto col-12 order-1">
-          <p class="copyrights">Uddùg LTD, 2020</p>
+          <p class="copyrights">
+            Uddùg LTD, 2020
+          </p>
         </div>
         <div class="col-sm-auto mustfooter__bottom__social col-6 order-4 order-sm-2">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/facebook-footer.svg">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/linkedin-footer.svg">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/twitter-footer.svg">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/github-footer.svg">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/facebook-footer.svg" alt="facebook">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/linkedin-footer.svg" alt="linkedin">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/twitter-footer.svg" alt="twitter">
+          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/github-footer.svg" alt="github">
         </div>
         <div class="col-sm-auto col-12 order-2 order-sm-3">
-          <p class="mustfooter__bottom__contact icon-mail">info@uddug.com</p>
+          <p class="mustfooter__bottom__contact icon-mail">
+            info@uddug.com
+          </p>
         </div>
         <div class="col-sm-auto col-6 order-3 order-sm-4">
-          <p class="mustfooter__bottom__contact icon-phone">+1 (234) 567 89 00</p>
+          <p class="mustfooter__bottom__contact icon-phone">
+            +1 (234) 567 89 00
+          </p>
         </div>
       </div>
     </div>
