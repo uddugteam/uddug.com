@@ -71,7 +71,7 @@
         {{ partners.title }}
       </h2>
       <div class="row">
-        <div class="col-sm-5 order-sm-2 partners__logos">
+        <div class="col-sm-5 col-md-auto order-sm-2 partners__logos">
           <a v-for="(p, i) in partners.partners" :key="i" :href="p.url" target="_blank">
             <img :src="require(`~/assets/images/partners/${p.logo}`)" :alt="p.name">
           </a>
@@ -180,6 +180,16 @@ them share the need to have a software solution.`
             name: 'regionconsalt',
             logo: 'regionconsalt.png',
             url: 'http://regionc.ru'
+          },
+          {
+            name: 'macbio',
+            logo: 'macbio.png',
+            url: 'https://macbio.ru'
+          },
+          {
+            name: 'nrz',
+            logo: 'nrz.png',
+            url: 'https://www.nrz63.ru'
           }
         ] as Partner[]
       }
@@ -425,6 +435,7 @@ them share the need to have a software solution.`
 
     img {
       margin-right: 30px;
+      margin-bottom: 10px;
       height: 40px;
     }
   }
