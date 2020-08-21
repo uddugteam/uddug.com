@@ -155,6 +155,22 @@ export default {
           ]
         },
         {
+          name: 'Constantine Czerniak',
+          photo: 'cc.jpg',
+          position: 'Data Scientist',
+          roles: [
+            'Machine Learning',
+            'Data Science',
+            'Neural Networking'
+          ],
+          social: [
+            {
+              type: 'linkedin',
+              link: 'https://www.linkedin.com/in/сczerniak/'
+            }
+          ]
+        },
+        {
           name: 'Anuar Zhumaev',
           photo: 'az.jpg',
           position: 'Ui/Ux Designer',
