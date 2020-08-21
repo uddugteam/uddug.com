@@ -51,6 +51,10 @@
       </div>
     </header>
     <section class="container services">
+      <h5 class="services__slogan">
+        {{ slogan[0] }}
+        <span class="services__slogan__break">{{ slogan[1] }}</span>
+      </h5>
       <div class="row">
         <div v-for="(s, i) in services" :key="i" class="col-12 col-sm-6 col-lg-3">
           <div class="services__item services__item-consulting" :class="s.icon">
@@ -134,6 +138,10 @@ them share the need to have a software solution.`
           'Trusted',
           'development partner'
         ]
+      ],
+      slogan: [
+        'We are devoted to creating help humanity ',
+        'get to the future faster'
       ],
       services: [
         {
@@ -372,6 +380,35 @@ them share the need to have a software solution.`
 
   @include media-breakpoint-up(lg) {
     padding-top: 100px;
+  }
+
+  &__slogan {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 120%;
+    color: $dark;
+    margin-bottom: 121px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 24px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 100px;
+    }
+
+    @include media-breakpoint-only(xs) {
+      font-size: 21px;
+      line-height: 130%;
+    }
+
+    &__break {
+      @include media-breakpoint-up(sm) {
+        display: block;
+      }
+    }
   }
 
   &__item {
