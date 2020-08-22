@@ -1,9 +1,16 @@
 <template>
   <section class="team">
     <div class="container">
-      <h2 class="section-header">
-        {{ title }}
-      </h2>
+      <div class="row">
+        <div class="col-auto mr-auto">
+          <h2 class="section-header">
+            {{ title }}
+          </h2>
+        </div>
+        <div class="col-auto">
+          <h1>popa</h1>
+        </div>
+      </div>
     </div>
     <div class="carousel">
       <VueSlickCarousel v-bind="slickOptions">
