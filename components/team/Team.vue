@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-auto mr-auto">
           <h2 class="section-header">
-            {{ title }}
+            Team
           </h2>
         </div>
         <div class="col-auto">
@@ -48,7 +48,6 @@ export default {
   name: 'Team',
   data () {
     return {
-      title: 'Our team',
       team: [
         {
           name: 'Andrew Skurlatov',

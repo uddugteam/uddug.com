@@ -2,7 +2,7 @@
   <section class="projects">
     <div class="container">
       <h2 class="projects__title">
-        Our projects<span class="projects__title__and">and</span>
+        Projects<span class="projects__title__and">and</span>
         <span class="projects__title__technologies">Technologies</span>
       </h2>
       <div class="row">

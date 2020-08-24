@@ -146,22 +146,22 @@ them share the need to have a software solution.`
       services: [
         {
           title: 'Technical Consulting',
-          description: 'Advice on the strategic employment of modern technologies based on a thorough analysis and experience.',
+          description: 'Advice on the strategic employment of modern technologies based on a thorough analysis and experience, that fits, and to uncover the right tech for your toughest business problems — no matter the industry.',
           icon: 'icon-consulting'
         },
         {
           title: 'Cloud Infrastructure',
-          description: 'Using DevOps best practises to design and implement most related solutions for all major cloud providers.',
+          description: 'Powering the journey to higher agility, faster innovation and lower costs, our team uses DevOps best practises to design and implement most related solutions for all major cloud providers.',
           icon: 'icon-cloud'
         },
         {
           title: 'Machine Learning',
-          description: 'Artificially intelligent machines are able to sift through and interpret massive amounts of data from various sources to carry out a wide range of tasks.',
+          description: 'What could your company achieve if every interaction with technology were intelligent?  We focusing in on AI solutions  that explicitly deliver on the most critical elements of business strategy and help to deliver real value.',
           icon: 'icon-ml'
         },
         {
           title: 'Blockchain Developing',
-          description: 'Decentralized applications and distributed services powered by public and private blockchain networks.',
+          description: 'Blockchain is pioneering transparent and secure business processes. We work on developing of decentralized applications and distributed services powered by public and private blockchain networks. Capitalize on it today with the leaders in ledger technologies.',
           icon: 'icon-blockchain'
         }
       ] as Service[],
