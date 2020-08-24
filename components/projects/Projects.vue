@@ -367,6 +367,8 @@ export default {
 
     @include media-breakpoint-only(sm) {
       margin-right: 5px;
+      height: 570px;
+      padding-bottom: 29px;
     }
 
     @include media-breakpoint-only(xs) {

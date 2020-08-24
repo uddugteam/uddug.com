@@ -8,12 +8,15 @@
           </h2>
         </div>
         <div class="col-auto">
-          <h1>popa</h1>
+          <div class="slider-control d-none d-sm-block">
+            <div class="slider-control__arrow slider-control__arrow-left" @click="showPrev" />
+            <div class="slider-control__arrow slider-control__arrow-right" @click="showNext" />
+          </div>
         </div>
       </div>
     </div>
     <div class="carousel">
-      <VueSlickCarousel v-bind="slickOptions">
+      <VueSlickCarousel ref="carousel" v-bind="slickOptions">
         <div v-for="t in team" :key="t.name">
           <div class="carousel__item">
             <img class="carousel__item__image" :src="require(`~/assets/images/team/${t.photo}`)" :alt="t.name">
@@ -40,21 +43,7 @@
   </section>
 </template>
 
-<script lang="ts">
-
-interface Team {
-  name: string
-  photo: string
-  position: string
-  roles: string[]
-  social: Social[]
-}
-
-interface Social {
-  type: string
-  link: string
-}
-
+<script lang="js">
 export default {
   name: 'Team',
   data () {
@@ -193,7 +182,7 @@ export default {
             }
           ]
         }
-      ] as Team[],
+      ],
       slickOptions: {
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -231,6 +220,14 @@ export default {
           }
         ]
       }
+    }
+  },
+  methods: {
+    showNext () {
+      this.$refs.carousel.next()
+    },
+    showPrev () {
+      this.$refs.carousel.prev()
     }
   }
 }
@@ -359,6 +356,26 @@ export default {
         margin: 0 6px !important;
       }
     }
+  }
+}
+
+.slider-control {
+  padding-top: 15px;
+
+  &__arrow {
+    width: 15px;
+    height: 22px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 50px;
+  }
+
+  &__arrow-left {
+    background: transparent url("~assets/images/left-arrow.svg") no-repeat;
+  }
+
+  &__arrow-right {
+    background: transparent url("~assets/images/right-arrow.svg") no-repeat;
   }
 }
 </style>
