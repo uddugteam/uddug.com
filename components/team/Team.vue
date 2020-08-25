@@ -2,7 +2,7 @@
   <section class="team">
     <div class="container">
       <div class="row">
-        <div class="col-auto mr-auto">
+        <div class="col-auto mr-sm-auto team__title">
           <h2 class="section-header">
             Team
           </h2>
@@ -189,23 +189,59 @@ export default {
         infinite: true,
         focusOnSelect: true,
         centerMode: true,
-        centerPadding: '80px',
+        centerPadding: '520px',
         autoplay: true,
         responsive: [
           {
+            breakpoint: 1921,
+            settings: {
+              centerPadding: '350px'
+            }
+          },
+          {
+            breakpoint: 1800,
+            settings: {
+              centerPadding: '220px'
+            }
+          },
+          {
+            breakpoint: 1600,
+            settings: {
+              centerPadding: '180px'
+            }
+          },
+          {
+            breakpoint: 1500,
+            settings: {
+              centerPadding: '130px'
+            }
+          },
+          {
+            breakpoint: 1440,
+            settings: {
+              centerPadding: '100px'
+            }
+          },
+          {
             breakpoint: 1281,
             settings: {
-              centerPadding: '60px'
+              centerPadding: '80px'
+            }
+          },
+          {
+            breakpoint: 1112,
+            settings: {
+              centerPadding: '5px'
             }
           },
           {
             breakpoint: 1025,
             settings: {
-              centerPadding: '50px'
+              centerPadding: '20px'
             }
           },
           {
-            breakpoint: 769,
+            breakpoint: 800,
             settings: {
               slidesToShow: 3,
               centerPadding: '20px'
@@ -215,7 +251,22 @@ export default {
             breakpoint: 426,
             settings: {
               slidesToShow: 1,
+              centerPadding: '50px'
+            }
+          },
+          {
+            breakpoint: 376,
+            settings: {
+              slidesToShow: 1,
               centerPadding: '30px'
+            }
+          },
+          {
+            breakpoint: 321,
+            settings: {
+              slidesToShow: 1,
+              centerMode: false,
+              centerPadding: '0px'
             }
           }
         ]
@@ -250,6 +301,12 @@ export default {
   @include media-breakpoint-only(xs) {
     padding-bottom: 55px;
   }
+
+  &__title {
+    @include media-breakpoint-down(xs) {
+      margin: auto;
+    }
+  }
 }
 
 .carousel {
@@ -267,7 +324,7 @@ export default {
     transition: margin-top 0.5s, box-shadow 0.5s;
     height: 539px;
     width: 285px;
-    margin: 0 9px 60px;
+    margin: auto auto 60px;
     padding-top: 51px;
     border: 1px solid $lighter;
     box-sizing: border-box;
