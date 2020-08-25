@@ -168,11 +168,11 @@ export default {
         {
           name: 'Anuar Zhumaev',
           photo: 'az.jpg',
-          position: 'Ui/Ux Designer',
+          position: 'Lead Designer',
           roles: [
-            'Ui/Ux Design',
-            'User Flow',
-            'Graphic Design'
+            'Product Design',
+            'Art-Direction',
+            'Concepting'
           ],
           social: [
             {
@@ -190,6 +190,7 @@ export default {
         focusOnSelect: true,
         centerMode: true,
         centerPadding: '80px',
+        autoplay: true,
         responsive: [
           {
             breakpoint: 1281,

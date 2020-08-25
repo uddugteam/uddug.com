@@ -198,6 +198,11 @@ them share the need to have a software solution.`
             name: 'nrz',
             logo: 'nrz.png',
             url: 'https://www.nrz63.ru'
+          },
+          {
+            name: 'spamorez',
+            logo: 'spamorez.png',
+            url: 'https://spamorez.ru'
           }
         ] as Partner[]
       }
