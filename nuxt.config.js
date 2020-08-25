@@ -22,6 +22,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { property: 'og:title', content: 'uddug' },
+      { property: 'og:description', content: 'We combine proven methodologies, business domain knowledge and technology expertise of skilled software professionals to deliver highly optimized solutions and services across wide range of industry domains.' },
+      { property: 'og:site_name', content: 'https://uddug.com' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://uddug.com' },
+      { property: 'og:image', content: '/cover.jpg' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
