@@ -15,20 +15,28 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Uddùg team',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { property: 'og:title', content: 'uddug' },
+      { property: 'og:title', content: 'Uddùg team - we are devoted to creating help humanity get to the future faster' },
       { property: 'og:description', content: 'We combine proven methodologies, business domain knowledge and technology expertise of skilled software professionals to deliver highly optimized solutions and services across wide range of industry domains.' },
-      { property: 'og:site_name', content: 'https://uddug.com' },
+      { property: 'og:site_name', content: 'Uddùg' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://uddug.com' },
-      { property: 'og:image', content: '/cover.jpg' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { property: 'og:image', itemprop: 'image', content: '/cover.jpg' },
+      { name: 'twitter:title', content: 'Uddùg team - we are devoted to creating help humanity get to the future faster' },
+      { name: 'twitter:description', content: 'We combine proven methodologies, business domain knowledge and technology expertise of skilled software professionals to deliver highly optimized solutions and services across wide range of industry domains.' },
+      { name: 'twitter:image', content: '/cover.jpg' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@uddug' },
+      { name: 'twitter:image:alt', content: 'Uddùg team - we are devoted to creating help humanity get to the future faster' },
+      { hid: 'description', name: 'description', content: 'We combine proven methodologies, business domain knowledge and technology expertise of skilled software professionals to deliver highly optimized solutions and services across wide range of industry domains.' },
+      { hid: 'keywords', name: 'keywords', content: 'Uddùg team, development team, blockchain development, machine learning, cloud infrastructure, devops' },
+      { hid: 'image', name: 'image', content: '/cover.jpg' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/uddug.com/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
