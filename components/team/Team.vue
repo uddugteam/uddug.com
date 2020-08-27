@@ -80,9 +80,9 @@ export default {
         {
           name: 'Mike Manko',
           photo: 'mm.jpg',
-          position: 'Project Manager',
+          position: 'Head of Produc',
           roles: [
-            'Team Management',
+            'Project Management',
             'Business Development',
             'Social Communication'
           ],
@@ -162,6 +162,10 @@ export default {
             {
               type: 'linkedin',
               link: 'https://www.linkedin.com/in/сczerniak/'
+            },
+            {
+              type: 'github',
+              link: 'https://github.com/nikichv'
             }
           ]
         },
