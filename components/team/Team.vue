@@ -108,7 +108,7 @@ export default {
           roles: [
             'DevOps Practices',
             'Cloud Infrastructure',
-            'Security'
+            'Security Audit'
           ],
           social: [
             {
