@@ -84,7 +84,7 @@ export default {
           roles: [
             'Project Management',
             'Business Development',
-            'Social Communication'
+            'Strategic planning'
           ],
           social: [
             {
