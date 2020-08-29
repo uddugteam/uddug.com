@@ -80,7 +80,7 @@ export default {
         {
           name: 'Mike Manko',
           photo: 'mm.jpg',
-          position: 'Head of Produc',
+          position: 'Head of Product',
           roles: [
             'Project Management',
             'Business Development',

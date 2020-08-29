@@ -428,12 +428,18 @@ export default {
     }
 
     &__link {
+      transition: color 0.2s, text-decoration 0.2s;
       color: $bluer;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 150%;
-      text-decoration-line: underline;
+      text-decoration: underline;
+
+      &:hover {
+        color: $dark !important;
+        text-decoration: none;
+      }
     }
 
     &__stack-main {

@@ -1,6 +1,6 @@
 <template>
   <footer id="footer" class="mustfooter">
-    <div class="mustfooter__contacts container">
+    <!--<div class="mustfooter__contacts container">
       <div class="row">
         <div class="col-12 col-md-4">
           <h2 class="mustfooter__contacts__title">
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="mustfooter__bottom container">
       <div class="row">
         <div class="col-sm-auto mr-sm-auto col-12 order-1">
@@ -42,12 +42,9 @@
         </div>
         <div class="col-sm-auto col-12 order-2 order-sm-3">
           <p class="mustfooter__bottom__contact icon-mail">
-            info@uddug.com
-          </p>
-        </div>
-        <div class="col-sm-auto col-6 order-3 order-sm-4">
-          <p class="mustfooter__bottom__contact icon-phone">
-            +1 (234) 567 89 00
+            <a href="mailto:info@uddug.com">
+              info@uddug.com
+            </a>
           </p>
         </div>
       </div>
@@ -184,6 +181,14 @@ export default {
 
     @include media-breakpoint-only(xs) {
       padding: 32px 0 45px 0;
+    }
+
+    a {
+      color: inherit !important;
+
+      &:hover {
+        color: $scarleter !important;
+      }
     }
 
     &__social {

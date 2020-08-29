@@ -228,10 +228,15 @@ them share the need to have a software solution.`
   }
 
   &__underliner {
+    transition: color 0.2s;
     // TODO need corner radius for underline
     text-decoration: underline;
     text-decoration-color: $scarleter;
     cursor: pointer;
+
+    &:hover {
+      color: $scarleter;
+    }
   }
 
   &__title {

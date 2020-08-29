@@ -60,12 +60,18 @@ export default {
 
 .navbar-nav {
   li {
+    transition: color 0.2s, text-decoration 0.2s;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     cursor: pointer;
+
+    &:hover{
+      color: $scarleter;
+      text-decoration: underline;
+    }
   }
 }
 </style>
