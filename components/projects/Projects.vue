@@ -89,7 +89,7 @@ export default {
         },
         {
           name: 'Kickstox',
-          description: 'Kickstox aims to become the online reference point for football fans who want to connect, to compete, and to check scores and stats. We desire Kickstox to become part of the football conversation among groups of friends whenever, wherever.',
+          description: 'Football trading game. The platform aims to become the online reference point for football fans, and allows you to trade your favourite players, from your favourite football teams, analize stats (in real time), and challenge your friends.',
           stack: {
             main: [
               'Go',
@@ -147,8 +147,8 @@ export default {
           url: 'https://snark.art'
         },
         {
-          name: 'ZamZam',
-          description: 'Digital bank realises international money transfers lean on p2p billing system architecture.',
+          name: 'Zam Zam',
+          description: 'Digital bank realises international money transfers based on blockchain technology with a hybrid billing architecture, includes exchange (fiat/digytal currency) and credit cards services.',
           stack: {
             main: [
               'Go',
@@ -208,7 +208,7 @@ export default {
         },
         {
           name: 'YourAdsMedia',
-          description: 'RTB ad network includes various payment system components like payments via cryptocurrencies and credit cards. System allows publishers to place promotional materials on the advertisers channels.',
+          description: 'RTB ad network allows publishers to place promotional materials on the advertisers channels, and to pay with a cryptocurrencies and credit cards.',
           stack: {
             main: [
               'PHP',
@@ -227,7 +227,7 @@ export default {
         },
         {
           name: 'Cryptozaur',
-          description: 'Platform for creating and interacting with crypto faucets, based on micropayments for x4 coins. 2014 - the world top 10 faucets.',
+          description: 'Platform allows to create crypto-faucets, includes micro payments x4 coins. 2014 award - the world top 10 faucets.',
           stack: {
             main: [
               'PHP',
@@ -247,7 +247,7 @@ export default {
         },
         {
           name: 'Roumboutique',
-          description: 'The development of the system for IT optimisation such business processes as international distribution, promotion and sale of alcoholic beverages for all divisions within the company.',
+          description: '',
           stack: {
             main: [
               'PHP',
