@@ -63,7 +63,7 @@ export default {
       projects: [
         {
           name: 'Trusted Health Consul',
-          description: 'Platform perform deep analisys of the medical data using machine learning algoritms. Peer-to-peer database architecture provides secure and anonymous data.',
+          description: 'Platform perform real-time medical data deep analize and automate decisions using machine learning algoritms. System empower patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
           stack: {
             main: [
               'Rust',
@@ -89,7 +89,7 @@ export default {
         },
         {
           name: 'Kickstox',
-          description: 'Kickstox aims to become the online reference point for football fans who want to connect, to compete, and to check scores and stats. We desire Kickstox to become part of the football conversation among groups of friends whenever, wherever.',
+          description: 'Football trading game. The platform aims to become the online reference point for football fans, and allows you to trade your favourite players, from your favourite football teams, analize stats (in real time), and challenge your friends.',
           stack: {
             main: [
               'Go',
@@ -147,8 +147,8 @@ export default {
           url: 'https://snark.art'
         },
         {
-          name: 'ZamZam',
-          description: 'Digital bank realises international money transfers lean on p2p billing system architecture.',
+          name: 'Zam Zam',
+          description: 'Digital bank realises international money transfers based on blockchain technology with a hybrid billing architecture, includes exchange (fiat/digytal currency) and credit cards services.',
           stack: {
             main: [
               'Go',
@@ -176,7 +176,7 @@ export default {
         },
         {
           name: 'ICEX',
-          description: 'Cryptocurrency exchange which properly includes group of site-projects to create a full-fledged financial ecosystem including: wallets, funds, indicative tools, analytical center, trading core (various trading sectors, opportunity to be a company sub-broker).',
+          description: 'Cryptocurrency exchange with various trading sectors and opportunity to be a company sub-broker. Platform properly includes a group of site-projects to create a full-fledged financial ecosystem including: wallets, funds, indicative tools, analytical center, trading core.',
           stack: {
             main: [
               'C++',
@@ -207,8 +207,8 @@ export default {
           url: 'https://github.com/icexch'
         },
         {
-          name: 'YourAdsMedia',
-          description: 'RTB ad network includes various payment system components like payments via cryptocurrencies and credit cards. System allows publishers to place promotional materials on the advertisers channels.',
+          name: 'Your Ads Media',
+          description: 'RTB ad network allows publishers to place promotional materials on the advertisers channels and to pay with cryptocurrencies, also via credit cards services.',
           stack: {
             main: [
               'PHP',
@@ -227,7 +227,7 @@ export default {
         },
         {
           name: 'Cryptozaur',
-          description: 'Platform for creating and interacting with crypto faucets, based on micropayments for x4 coins. 2014 - the world top 10 faucets.',
+          description: 'Platform allows to create unlinited amount of crypto-faucets and to receive passive income, or allows to invest and interact with other faucets. System based on micro payments (x4 coins). 2014 award - the world top 10 faucets.',
           stack: {
             main: [
               'PHP',
@@ -246,8 +246,8 @@ export default {
           url: ''
         },
         {
-          name: 'Roumboutique',
-          description: 'The development of the system for IT optimisation such business processes as international distribution, promotion and sale of alcoholic beverages for all divisions within the company.',
+          name: 'Rum boutique',
+          description: 'Business processes optimisation for all divisions within the ininternational company working with rum distribution (e-commerce, promotional, loyalty, accounting, stock, control and security).',
           stack: {
             main: [
               'PHP',
