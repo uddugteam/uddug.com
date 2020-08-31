@@ -31,7 +31,7 @@
       <div class="row">
         <div class="col-sm-auto mr-sm-auto col-12 order-1">
           <p class="copyrights">
-            Uddùg LTD, 2020
+            Uddùg team ©, 2013-2020
           </p>
         </div>
         <div class="col-sm-auto mustfooter__bottom__social col-6 order-4 order-sm-2">
