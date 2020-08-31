@@ -63,7 +63,7 @@ export default {
       projects: [
         {
           name: 'Trusted Health Consul',
-          description: 'Platform perform deep analisys of the medical data using machine learning algoritms. Peer-to-peer database architecture provides secure and anonymous data.',
+          description: 'Platform perform real-time medical data deep analize and automate decisions using machine learning algoritms. System empower patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
           stack: {
             main: [
               'Rust',
@@ -176,7 +176,7 @@ export default {
         },
         {
           name: 'ICEX',
-          description: 'Cryptocurrency exchange which properly includes group of site-projects to create a full-fledged financial ecosystem including: wallets, funds, indicative tools, analytical center, trading core (various trading sectors, opportunity to be a company sub-broker).',
+          description: 'Cryptocurrency exchange with various trading sectors and opportunity to be a company sub-broker. Platform properly includes a group of site-projects to create a full-fledged financial ecosystem including: wallets, funds, indicative tools, analytical center, trading core.',
           stack: {
             main: [
               'C++',
@@ -207,8 +207,8 @@ export default {
           url: 'https://github.com/icexch'
         },
         {
-          name: 'YourAdsMedia',
-          description: 'RTB ad network allows publishers to place promotional materials on the advertisers channels, and to pay with a cryptocurrencies and credit cards.',
+          name: 'Your Ads Media',
+          description: 'RTB ad network allows publishers to place promotional materials on the advertisers channels and to pay with cryptocurrencies, also via credit cards services.',
           stack: {
             main: [
               'PHP',
@@ -227,7 +227,7 @@ export default {
         },
         {
           name: 'Cryptozaur',
-          description: 'Platform allows to create crypto-faucets, includes micro payments x4 coins. 2014 award - the world top 10 faucets.',
+          description: 'Platform allows to create unlinited amount of crypto-faucets and to receive passive income, or allows to invest and interact with other faucets. System based on micro payments (x4 coins). 2014 award - the world top 10 faucets.',
           stack: {
             main: [
               'PHP',
@@ -246,8 +246,8 @@ export default {
           url: ''
         },
         {
-          name: 'Roumboutique',
-          description: '',
+          name: 'Rum boutique',
+          description: 'Business processes optimisation for all divisions within the ininternational company working with rum distribution (e-commerce, promotional, loyalty, accounting, stock, control and security).',
           stack: {
             main: [
               'PHP',
