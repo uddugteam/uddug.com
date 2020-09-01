@@ -55,8 +55,8 @@ export default {
           position: 'Technical Lead',
           roles: [
             'Architecture design',
-            'Backend implementation',
-            'Blockchain development'
+            'Backend',
+            'Blockchain'
           ],
           social: [
             {
@@ -106,9 +106,9 @@ export default {
           photo: 'ip.jpg',
           position: 'DevOps Engineer',
           roles: [
-            'DevOps Practices',
+            'DevOps',
             'Cloud Infrastructure',
-            'Security Audit'
+            'Security'
           ],
           social: [
             {
@@ -130,9 +130,9 @@ export default {
           photo: 'nv.jpg',
           position: 'Senior Frontend Developer',
           roles: [
-            'Frontend Implementation',
+            'Frontend',
             'Architecture Design',
-            'Client-side Developing'
+            'Real-time UX'
           ],
           social: [
             {
