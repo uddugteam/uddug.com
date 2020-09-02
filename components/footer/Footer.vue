@@ -265,18 +265,4 @@ export default {
   }
 }
 
-/*.icon-mail {
-  background: transparent url("~assets/images/communications/email.svg") no-repeat;
-  padding-left: 28.25px;
-  margin-right: 42px;
-
-  @include media-breakpoint-only(sm) {
-    margin-right: 30px;
-  }
-
-  @include media-breakpoint-only(xs) {
-    margin-bottom: 18px;
-  }
-}*/
-
 </style>

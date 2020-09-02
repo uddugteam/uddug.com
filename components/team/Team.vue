@@ -9,8 +9,12 @@
         </div>
         <div class="col-auto">
           <div class="slider-control d-none d-sm-block">
-            <div class="slider-control__arrow slider-control__arrow-left" @click="showPrev" />
-            <div class="slider-control__arrow slider-control__arrow-right" @click="showNext" />
+            <div class="slider-control__arrow" @click="showPrev">
+              <i class="icon-left-arrow" />
+            </div>
+            <div class="slider-control__arrow" @click="showNext">
+              <i class="icon-right-arrow" />
+            </div>
           </div>
         </div>
       </div>
@@ -32,8 +36,8 @@
               </li>
             </ul>
             <div class="carousel__item__social">
-              <a v-for="s in t.social" :key="s.type" :href="s.link" target="_blank">
-                <img class="carousel__item__social__icon" :src="require(`~/assets/images/social/${s.type}.svg`)" :alt="s.type">
+              <a v-for="s in t.social" :key="s.type" :href="s.link" target="_blank" class="carousel__item__social__icon">
+                <i :class="`icon-${s.type}`" />
               </a>
             </div>
           </div>
@@ -413,8 +417,15 @@ export default {
       margin-top: 35px;
 
       &__icon {
+        transition: color 0.2s;
         display: inline !important;
         margin: 0 6px !important;
+        color: $darker;
+        font-size: 30px;
+
+        &:hover {
+          color: $scarleter;
+        }
       }
     }
   }
@@ -424,19 +435,21 @@ export default {
   padding-top: 15px;
 
   &__arrow {
+    transition: color 0.2s;
     width: 15px;
     height: 22px;
-    cursor: pointer;
     display: inline-block;
     margin-left: 50px;
-  }
+    font-size: 22px;
 
-  &__arrow-left {
-    background: transparent url("~assets/images/left-arrow.svg") no-repeat;
-  }
+    &:hover {
+      color: $scarleter;
+    }
 
-  &__arrow-right {
-    background: transparent url("~assets/images/right-arrow.svg") no-repeat;
+    i {
+      cursor: pointer !important;
+      user-select: none;
+    }
   }
 }
 </style>
