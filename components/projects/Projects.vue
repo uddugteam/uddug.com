@@ -8,6 +8,9 @@
       <div class="row">
         <div v-for="p in projects" :key="p.name" class="col-12 col-sm-6">
           <div class="projects__item">
+            <p v-if="p.current" class="projects__item__current">
+              Currently working on <span class="mark-ellipse" />
+            </p>
             <div class="row">
               <div class="col-auto mr-auto">
                 <h3 class="projects__item__title">
@@ -47,6 +50,7 @@
 <script lang="ts">
 
 interface Project {
+  current: boolean,
   name: string,
   url: string,
   description: string,
@@ -62,6 +66,7 @@ export default {
     return {
       projects: [
         {
+          current: true,
           name: 'Trusted Health Consul',
           description: 'Platform perform real-time medical data deep analize and automate decisions using machine learning algoritms. System empower patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
           stack: {
@@ -351,7 +356,7 @@ export default {
     font-size: 14px;
     margin-bottom: 20px;
     user-select: none;
-    height: 515px;
+    height: 525px;
 
     @include media-breakpoint-only(xl) {
       padding: 90px 100px;
@@ -400,6 +405,23 @@ export default {
 
     &:hover &__stack-other__title {
       color: $browner;
+    }
+
+    &:hover &__current {
+      color: $scarleter;
+    }
+
+    &:hover .mark-ellipse {
+      background-color: $scarleter;
+    }
+
+    &__current {
+      transition: color 0.5s;
+      color: #00FF19;
+      font-size: 14px;
+      line-height: 150%;
+      vertical-align: middle;
+      margin-bottom: 30px;
     }
 
     &__title {
@@ -479,5 +501,16 @@ export default {
       margin-bottom: 20px;
     }
   }
+}
+
+.mark-ellipse {
+  transition: background-color 0.5s;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #00FF19;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 7px;
 }
 </style>
