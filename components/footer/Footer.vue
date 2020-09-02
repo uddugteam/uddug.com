@@ -38,10 +38,6 @@
           <a v-for="s in bottom.social" :key="s.type" :href="s.link" target="_blank" class="mustfooter__bottom__social__icon">
             <i :class="`icon-${s.type}`" />
           </a>
-<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/facebook-footer.svg" alt="facebook">-->
-<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/linkedin-footer.svg" alt="linkedin">-->
-<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/twitter-footer.svg" alt="twitter">-->
-<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/github-footer.svg" alt="github">-->
         </div>
         <div class="col-sm-auto col-12 order-2 order-sm-3">
           <p class="mustfooter__bottom__contact">
