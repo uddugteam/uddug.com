@@ -40,6 +40,8 @@ $container-max-widths: (
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+@import "~assets/fontello-uddug/css/uddug.css";
+
 @font-face {
   font-family: 'Montserrat';
   src: url("~assets/fonts/Montserrat-Regular.ttf");

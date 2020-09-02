@@ -31,19 +31,22 @@
       <div class="row">
         <div class="col-sm-auto mr-sm-auto col-12 order-1">
           <p class="copyrights">
-            Uddùg team ©, 2013-2020
+            {{ copyrights }}
           </p>
         </div>
         <div class="col-sm-auto mustfooter__bottom__social col-6 order-4 order-sm-2">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/facebook-footer.svg" alt="facebook">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/linkedin-footer.svg" alt="linkedin">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/twitter-footer.svg" alt="twitter">
-          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/github-footer.svg" alt="github">
+          <a v-for="s in bottom.social" :key="s.type" :href="s.link" target="_blank" class="mustfooter__bottom__social__icon">
+            <i :class="`icon-${s.type}`" />
+          </a>
+<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/facebook-footer.svg" alt="facebook">-->
+<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/linkedin-footer.svg" alt="linkedin">-->
+<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/twitter-footer.svg" alt="twitter">-->
+<!--          <img class="mustfooter__bottom__social__icon" src="~/assets/images/social/github-footer.svg" alt="github">-->
         </div>
         <div class="col-sm-auto col-12 order-2 order-sm-3">
-          <p class="mustfooter__bottom__contact icon-mail">
-            <a href="mailto:info@uddug.com">
-              info@uddug.com
+          <p class="mustfooter__bottom__contact">
+            <a :href="`mailto:${bottom.mail}`" class="mustfooter__bottom__contact__link">
+              <i class="icon-email mustfooter__bottom__contact__icon" /><span class="mustfooter__bottom__contact__text">{{ bottom.mail }}</span>
             </a>
           </p>
         </div>
@@ -52,9 +55,32 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
+interface Social {
+  type: string,
+  link: string
+}
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data () {
+    return {
+      copyrights: 'Uddùg team © 2013-2020',
+      bottom: {
+        social: [
+          {
+            type: 'github',
+            link: 'http://github.com/uddugteam'
+          },
+          {
+            type: 'linkedin',
+            link: 'https://www.linkedin.com/company/uddug'
+          }
+        ] as Social[],
+        mail: 'info@uddug.com'
+      }
+    }
+  }
 }
 </script>
 
@@ -184,6 +210,7 @@ export default {
     }
 
     a {
+      transition: color 0.2s, text-decoration 0.2s;
       color: inherit !important;
 
       &:hover {
@@ -193,10 +220,12 @@ export default {
 
     &__social {
       @include media-breakpoint-only(xs) {
-        padding-left: 12px;
+        padding-top: 22px;
       }
 
       &__icon {
+        font-size: 23px;
+
         margin-right: 40px;
 
         @include media-breakpoint-only(sm) {
@@ -205,6 +234,24 @@ export default {
 
         @include media-breakpoint-only(xs) {
           margin-right: 12px;
+        }
+      }
+    }
+
+    &__contact {
+      vertical-align: middle;
+      &__icon {
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 20px;
+      }
+
+      &__text {
+        vertical-align: middle;
+        display: inline-block;
+
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
@@ -218,10 +265,11 @@ export default {
 .copyrights {
   @include media-breakpoint-only(xs) {
     margin-bottom: 22px;
+    padding-left: 5px;
   }
 }
 
-.icon-mail {
+/*.icon-mail {
   background: transparent url("~assets/images/communications/email.svg") no-repeat;
   padding-left: 28.25px;
   margin-right: 42px;
@@ -233,10 +281,6 @@ export default {
   @include media-breakpoint-only(xs) {
     margin-bottom: 18px;
   }
-}
+}*/
 
-.icon-phone {
-  background: transparent url("~assets/images/communications/call.svg") no-repeat;
-  padding-left: 26.37px;
-}
 </style>
