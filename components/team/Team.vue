@@ -169,7 +169,7 @@ export default {
             },
             {
               type: 'github',
-              link: 'https://github.com/nikichv'
+              link: 'https://github.com/Snaaby'
             }
           ]
         },
