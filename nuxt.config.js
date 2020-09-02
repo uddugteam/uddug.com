@@ -51,7 +51,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: '@/plugins/vue-slick-carousel.js' }
+    { src: '@/plugins/vue-slick-carousel.js' },
+    { src: '@/plugins/ga.js', mode: 'client' }
   ],
   /*
   ** Auto import components
