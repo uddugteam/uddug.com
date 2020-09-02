@@ -1,6 +1,6 @@
 <template>
   <footer id="footer" class="mustfooter">
-    <!--<div class="mustfooter__contacts container">
+    <div class="mustfooter__contacts container">
       <div class="row">
         <div class="col-12 col-md-4">
           <h2 class="mustfooter__contacts__title">
@@ -11,22 +11,22 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="mustfooter__contacts__form">
             <label for="contactName">Name</label>
-            <input id="contactName" type="text" placeholder="John Silver">
+            <input id="contactName" v-model="form.name.value" type="text" placeholder="John Silver" :class="{ inputerror: form.name.error }">
             <label for="contactEmail">E-mail</label>
-            <input id="contactEmail" type="email" placeholder="example@mail.com">
+            <input id="contactEmail" v-model="form.email.value" type="email" placeholder="example@mail.com" :class="{ inputerror: form.email.error }">
           </div>
         </div>
         <div class="col-12 col-sm-6 col-md-4">
           <div class="mustfooter__contacts__form">
             <label for="contactThoughts">Thoughts</label>
-            <textarea id="contactThoughts" placeholder="Tell us your thoughts" />
-            <button id="contactSubmit">
+            <textarea id="contactThoughts" v-model="form.message.value" placeholder="Tell us your thoughts" :class="{ inputerror: form.message.error }" />
+            <button id="contactSubmit" @click="sendMail()">
               Submit
             </button>
           </div>
         </div>
       </div>
-    </div>-->
+    </div>
     <div class="mustfooter__bottom container">
       <div class="row">
         <div class="col-sm-auto mr-sm-auto col-12 order-1">
@@ -51,17 +51,27 @@
   </footer>
 </template>
 
-<script lang="ts">
-interface Social {
-  type: string,
-  link: string
-}
-
+<script lang="js">
 export default {
   name: 'Footer',
   data () {
     return {
       copyrights: 'Uddùg team © 2013-2020',
+      form: {
+        isSend: false,
+        name: {
+          error: false,
+          value: ''
+        },
+        email: {
+          error: false,
+          value: ''
+        },
+        message: {
+          error: false,
+          value: ''
+        }
+      },
       bottom: {
         social: [
           {
@@ -72,9 +82,39 @@ export default {
             type: 'linkedin',
             link: 'https://www.linkedin.com/company/uddug'
           }
-        ] as Social[],
+        ],
         mail: 'info@uddug.com'
       }
+    }
+  },
+  methods: {
+    sendMail () {
+      this.form.name.error = this.form.name.value === ''
+      this.form.message.error = this.form.message.value === ''
+      this.form.email.error = this.form.email.value === '' || !this.validEmail(this.form.email.value)
+
+      if (this.form.name.error || this.form.email.error || this.form.message.error) {
+        console.warn('contact form has errors')
+        return
+      }
+
+      this.$axios.setBaseURL('http://localhost:80')
+      this.$axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*'
+
+      this.$axios.post(
+        '/contact',
+        {
+          email: this.form.email.value,
+          name: this.form.name.value,
+          message: this.form.message.value
+        }
+      )
+
+      console.log('message have sent')
+    },
+    validEmail (email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(email)
     }
   }
 }
@@ -146,6 +186,7 @@ export default {
       }
 
       input, textarea {
+        transition: border-color 0.3s;
         width: 100%;
         height: 40px;
         margin-bottom: 20px;
@@ -156,6 +197,15 @@ export default {
         line-height: 18px;
         background: none;
         color: $bluer;
+
+        &:hover {
+          border-color: $white;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $darker;
+        }
       }
 
       input {
@@ -173,6 +223,7 @@ export default {
       }
 
       button {
+        transition: color 0.3s, background-color 0.3s;
         background: $white;
         width: 100%;
         text-align: center;
@@ -185,6 +236,17 @@ export default {
         line-height: 17px;
         padding: 12px 0 11px 0;
 
+        &:hover {
+          background-color: $scarleter;
+          color: $white;
+        }
+
+        &:active, &:focus {
+          background-color: $skyer;
+          color: $white;
+          border: none;
+          outline: none;
+        }
       }
     }
   }
@@ -211,6 +273,10 @@ export default {
 
       &:hover {
         color: $scarleter !important;
+      }
+
+      &:active, &:focus {
+        color: $skyer !important;
       }
     }
 
@@ -263,6 +329,11 @@ export default {
     margin-bottom: 22px;
     padding-left: 5px;
   }
+}
+
+.inputerror {
+  border-color: $scarleter !important;
+  color: $scarleter;
 }
 
 </style>
