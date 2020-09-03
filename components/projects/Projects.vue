@@ -356,7 +356,7 @@ export default {
     font-size: 14px;
     margin-bottom: 20px;
     user-select: none;
-    height: 525px;
+    height: 545px;
 
     @include media-breakpoint-only(xl) {
       padding: 90px 100px;
@@ -422,6 +422,7 @@ export default {
       line-height: 150%;
       vertical-align: middle;
       margin-bottom: 30px;
+      margin-top: -25px;
     }
 
     &__title {
