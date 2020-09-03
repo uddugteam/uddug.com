@@ -68,7 +68,7 @@ export default {
         {
           current: true,
           name: 'Trusted Health Consul',
-          description: 'Platform perform real-time medical data deep analisis and automate decisions using machine learning algoritms. System empower patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
+          description: 'Platform perform real-time medical data deep analisis and automate decisions using machine learning algoritms. System empowers patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
           stack: {
             main: [
               'Rust',
@@ -94,7 +94,7 @@ export default {
         },
         {
           name: 'Kickstox',
-          description: 'Football trading game. The platform aims to become the online reference point for football fans, and allows you to trade your favourite players, from your favourite football teams, analize stats (in real time), and challenge your friends.',
+          description: 'Football trading game. The platform aims to become the online reference point for football fans and allows you to trade your favourite players from your favourite football teams, analize stats (in real time), and challenge your friends.',
           stack: {
             main: [
               'Go',
