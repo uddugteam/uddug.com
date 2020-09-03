@@ -98,7 +98,7 @@ export default {
         return
       }
 
-      this.$axios.setBaseURL('http://localhost:80')
+      this.$axios.setBaseURL('http://195.201.229.114:8081')
       this.$axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*'
 
       this.$axios.post(
