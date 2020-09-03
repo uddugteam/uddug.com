@@ -123,7 +123,7 @@ export default Vue.extend({
 expertise of skilled software professionals to deliver highly optimized solutions and
 services across wide range of industry domains.`,
         `Our projects are diverse, but all of
-them share the need to have a software solution.`
+them share the need to have a software solution for human.`
       ],
       advantages: [
         [
@@ -146,7 +146,7 @@ them share the need to have a software solution.`
       services: [
         {
           title: 'Technical Consulting',
-          description: 'Advice on the strategic employment of modern technologies based on a thorough analysis and experience, that fits, and to uncover the right tech for your toughest business problems — no matter what industry.',
+          description: 'Advice on the strategic employment of modern technologies based on a thorough analysis and experience that fits, and to uncover the right tech for your toughest business problems — no matter what industry.',
           icon: 'icon-consulting'
         },
         {
