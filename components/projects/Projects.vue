@@ -68,7 +68,7 @@ export default {
         {
           current: true,
           name: 'Trusted Health Consul',
-          description: 'Platform perform real-time medical data deep analize and automate decisions using machine learning algoritms. System empower patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
+          description: 'Platform perform real-time medical data deep analisis and automate decisions using machine learning algoritms. System empower patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
           stack: {
             main: [
               'Rust',
