@@ -122,7 +122,7 @@ export default Vue.extend({
         `We combine proven methodologies, business domain knowledge and technology
 expertise of skilled software professionals to deliver highly optimized solutions and
 services across wide range of industry domains.`,
-        `Our projects are different, but all of
+        `Our projects are diverse, but all of
 them share the need to have a software solution.`
       ],
       advantages: [
@@ -146,7 +146,7 @@ them share the need to have a software solution.`
       services: [
         {
           title: 'Technical Consulting',
-          description: 'Advice on the strategic employment of modern technologies based on a thorough analysis and experience, that fits, and to uncover the right tech for your toughest business problems — no matter the industry.',
+          description: 'Advice on the strategic employment of modern technologies based on a thorough analysis and experience, that fits, and to uncover the right tech for your toughest business problems — no matter what industry.',
           icon: 'icon-consulting'
         },
         {
@@ -156,7 +156,7 @@ them share the need to have a software solution.`
         },
         {
           title: 'Machine Learning',
-          description: 'What could your company achieve if every interaction with technology were intelligent?  We focusing in on AI solutions  that explicitly deliver on the most critical elements of business strategy and help to deliver real value.',
+          description: 'What could your company achieve if every interaction with technology were intelligent?  We focus in on AI solutions  that explicitly deliver on the most critical elements of business strategy and help to deliver real value.',
           icon: 'icon-ml'
         },
         {
