@@ -9,7 +9,7 @@
         <div v-for="p in projects" :key="p.name" class="col-12 col-sm-6">
           <div class="projects__item">
             <p v-if="p.current" class="projects__item__current">
-              Currently working on <span class="mark-ellipse" />
+              active development <span class="mark-ellipse" />
             </p>
             <div class="row">
               <div class="col-auto mr-auto">
@@ -25,6 +25,7 @@
             </div>
             <p class="projects__item__text">
               {{ p.description }}
+              
             </p>
             <div class="projects__item__stack-main">
               <div v-for="(t, i) in p.stack.main" :key="i" class="projects__item__stack-main__unit">
@@ -67,7 +68,7 @@ export default {
       projects: [
         {
           current: true,
-          name: 'Trusted Health Consul',
+          name: 'Health Consul',
           description: 'Platform performs real-time medical data deep analisis and automate decisions using machine learning algoritms. System empowers patients, providers, and payers delivering a highly connected, seamless experience along every step in the care journey. Peer-to-peer database architecture provides secure and anonymous data.',
           stack: {
             main: [
@@ -88,6 +89,19 @@ export default {
               'Kubernetes',
               'GCP',
               'Docker'
+            ]
+          },
+          url: ''
+        },
+        {
+          name: 'Jun::Db',
+          description: 'Substrate pallet provides a configurable database module with allowance to store and  manipulate a big amount of data. It's a very highload action to store large amounts of data on-chain. The most-common and useful solution for decentralised apps is to use IPFS as a data storage and store on-chain only hashes. Our team inspired by the OrbitDB focuses on the scalability, decentralised, easy-learning solution for Substrat developers. that want to manipulate big amounts of data easily. Available storage data types: key-value and hash.',
+          stack: {
+            main: [
+              'Rust',
+              'Substrate',
+              'Offchain::ipfs',
+              'IPFS',
             ]
           },
           url: ''
