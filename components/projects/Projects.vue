@@ -25,7 +25,7 @@
             </div>
             <p class="projects__item__text">
               {{ p.description }}
-              
+
             </p>
             <div class="projects__item__stack-main">
               <div v-for="(t, i) in p.stack.main" :key="i" class="projects__item__stack-main__unit">
@@ -96,13 +96,13 @@ export default {
         {
           current: true,
           name: 'Jun::Db',
-          description: 'Substrate pallet provides a configurable database module with allowance to store and  manipulate a big amount of data. It's a very highload action to store large amounts of data on-chain. The most-common and useful solution for decentralised apps is to use IPFS as a data storage and store on-chain only hashes. Our team inspired by the OrbitDB focuses on the scalability, decentralised, easy-learning solution for Substrat developers. that want to manipulate big amounts of data easily. Available storage data types: key-value and hash.',
+          description: 'Substrate pallet provides a configurable database module with allowance to store and  manipulate a big amount of data. It\'s a very highload action to store large amounts of data on-chain. The most-common and useful solution for decentralised apps is to use IPFS as a data storage and store on-chain only hashes. Our team inspired by the OrbitDB focuses on the scalability, decentralised, easy-learning solution for Substrat developers. that want to manipulate big amounts of data easily. Available storage data types: key-value and hash.',
           stack: {
             main: [
               'Rust',
               'Substrate',
               'Offchain::ipfs',
-              'IPFS',
+              'IPFS'
             ]
           },
           url: ''
