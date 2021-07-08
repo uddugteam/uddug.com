@@ -103,9 +103,12 @@ export default {
               'Substrate',
               'Offchain::ipfs',
               'IPFS'
+            ],
+            other: [
+            '[ecies-ed25519]'
             ]
           },
-          url: ''
+          url: 'https://github.com/uddugteam/juniDB'
         },
         {
           name: 'Kickstox',
