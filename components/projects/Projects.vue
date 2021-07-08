@@ -95,7 +95,7 @@ export default {
         },
         {
           current: true,
-          name: 'Jun::Db',
+          name: 'Juni::Db',
           description: 'Substrate pallet provides a configurable database module with allowance to store and  manipulate a big amount of data. It\'s a very highload action to store large amounts of data on-chain. The most-common and useful solution for decentralised apps is to use IPFS as a data storage and store on-chain only hashes. Our team inspired by the OrbitDB focuses on the scalability, decentralised, easy-learning solution for Substrat developers. that want to manipulate big amounts of data easily. Available storage data types: key-value and hash.',
           stack: {
             main: [
