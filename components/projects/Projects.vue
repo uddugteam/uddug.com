@@ -199,7 +199,6 @@ export default {
           url: 'https://zam.io'
         },
         {
-          current: true,
           name: 'ICEX',
           description: 'Cryptocurrency exchange with various trading sectors and opportunity to be a company sub-broker. Platform properly includes a group of site-projects to create a full-fledged financial ecosystem including: wallets, funds, indicative tools, analytical center, trading core.',
           stack: {
