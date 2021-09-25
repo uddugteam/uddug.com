@@ -138,6 +138,7 @@ export default {
           url: 'https://kickstox.com'
         },
         {
+          current: true,
           name: 'Snark.art',
           description: 'Snark.art uses the power of blockchain as a creative media to change the way art is made and collected.',
           stack: {
