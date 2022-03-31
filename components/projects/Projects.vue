@@ -231,6 +231,44 @@ export default {
           url: 'https://github.com/icexch'
         },
         {
+          name: 'OG Crystals',
+          description: 'OG:CR transforms static NFTs into a flourishing digital reefscape, where each uniquely individual piece of digital art grows every time it is re-sold.  All 10,301 OG:Crystals is a direct reflection of both their owner and future transactional  history, creating a visual record of combined digital and organic processes.  Like the living architecture formed by the exo-skeletons of coral polyps, past, present and future coexist, offering a new take on NFTs, value, and the creative process.',
+          stack: {
+            main: [
+              'Go',
+              'Solidity',
+              'IPFS',
+              'aws S3',
+              'k8s'
+            ],
+            other: [
+              'Docker',
+              'GCP',
+              'postgreSQL',
+              'redis'
+              'websockets',
+              'swagger'
+            ]
+          },
+          url: 'https://ogcrystals.com'
+        },
+        {
+          name: 'Naukotheca',
+          description: 'Mobile messenger applications iOS/Android for the scientific community, developed for government agencies. A feature here is the interaction with an exclusive object-relational database management system for general and special purposes with extended functionality through the use of plug-in modules.',
+          stack: {
+            main: [
+              'Node Js',
+              'Kotlin',
+              'Swift'
+            ],
+            other: [
+              'OpenAPI',
+              'websockets',
+              'docker',
+              'docker-compose'
+            ]
+        },
+        {
           name: 'Your Ads Media',
           description: 'RTB ad network allows publishers to place promotional materials on the advertisers channels and to pay with cryptocurrencies, also via credit cards services.',
           stack: {
