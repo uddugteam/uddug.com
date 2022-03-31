@@ -253,6 +253,7 @@ export default {
           url: 'https://ogcrystals.com'
         },
         {
+          current: true,
           name: 'Naukotheca',
           description: 'Mobile messenger applications iOS/Android for the scientific community, developed for government agencies. A feature here is the interaction with an exclusive object-relational database management system for general and special purposes with extended functionality through the use of plug-in modules.',
           stack: {
@@ -267,6 +268,8 @@ export default {
               'docker',
               'docker-compose'
             ]
+         },
+          url: ''
         },
         {
           name: 'Your Ads Media',
