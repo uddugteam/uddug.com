@@ -327,7 +327,7 @@ export default {
             ]
           },
           url: ''
-        }
+        },
       ] as Project[]
     }
   }
