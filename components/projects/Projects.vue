@@ -245,7 +245,7 @@ export default {
               'Docker',
               'GCP',
               'postgreSQL',
-              'redis'
+              'redis',
               'websockets',
               'swagger'
             ]
